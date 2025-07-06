@@ -1,0 +1,10 @@
+<h1><%= title %></h1>
+<% if (loaded) { %>
+<ol>
+    <% books.forEach(function(book) { %>
+    <li><%= book.title %> - <%= book.author %> (<%= book.year %>)</li>
+    <% }); %>
+</ol>
+<% } else { %>
+<p>Loading data, please wait...</p>
+<% } %>

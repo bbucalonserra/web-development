@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mustache Template</title>
+        <script src="https://cdn.jsdelivr.net/npm/mustache@latest/mustache.min.js"></script>
+    </head>
+    <body>
+        <div id="content"></div>
+        <script src="script.js"></script>
+        
+        <div id="template">
+            <h1>{{title}}</h1>
+            {{#loaded}}
+            <ol>
+                {{#books}}
+                <li>{{title}} - {{author}} ({{year}})</li>
+                {{/books}}
+            </ol>
+            {{/loaded}}
+            {{^loaded}}
+            <p>Loading data, please wait...</p>
+            {{/loaded}}
+        </div>  
+        </div>
+    </body>
+</html>
