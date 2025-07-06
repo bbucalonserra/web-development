@@ -152,18 +152,37 @@ class SimpleTemplateEngine {
 const tEngine = new SimpleTemplateEngine("template.html");
 
 // Criando uma variavel com os dados que queremos inserir no renderTemplate
-const data = {
-    title: "Page title",
-    content: "Page content",
-    subtitle: "Page subtitle",
-    loggedIn: true,
-    username: "nobody",
-    subcontent: "Page subcontent",
-    items: [
-        { title: 'item 1', description: 'desc 1' },
-        { title: 'item 2', description: 'desc 2' }
-    ]
+let data = {
+    loaded: false
 };
+
+setInterval(() => {
+    console.log("Reloading data")
+    fetch("http://localhost:3000/api/books")
+        .then(response => response.json())
+        .then(jsonData => {
+            console.log(jsonData);
+            data = {
+                title: "Book List",
+                loaded: true,
+                books: jsonData
+            }
+            // tEngine.renderTemplate('content', data); -> da problema n sei pq
+        });
+}, 5000);
+
+fetch("http://localhost:3000/api/books")
+    .then(response => response.json())
+    .then(jsonData => {
+        console.log(jsonData);
+        data = {
+            title: "Book List",
+            loaded: true,
+            books: jsonData
+        }
+        // tEngine.renderTemplate('content', data); -> da problema n sei pq
+    });
+
 
 // Aqui é uma função vazia, por isso "()"
 /*

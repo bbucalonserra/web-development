@@ -1,0 +1,208 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "author_id": 1,
+      "price": 10.99,
+      "genre": "Fiction",
+      "genre_id": 1,
+      "publication_date": "1925-04-10"
+    },
+    {
+      "id": 2,
+      "title": "1984",
+      "author": "George Orwell",
+      "author_id": 2,
+      "price": 8.99,
+      "genre": "Dystopian",
+      "genre_id": 2,
+      "publication_date": "1949-06-08"
+    },
+    {
+      "id": 3,
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "author_id": 3,
+      "price": 12.99,
+      "genre": "Fiction",
+      "genre_id": 1,
+      "publication_date": "1960-07-11"
+    },
+    {
+      "id": 4,
+      "title": "Brave New World",
+      "author": "Aldous Huxley",
+      "author_id": 4,
+      "price": 9.99,
+      "genre": "Dystopian",
+      "genre_id": 2,
+      "publication_date": "1932-08-30"
+    },
+    {
+      "id": 5,
+      "title": "Animal Farm",
+      "author": "George Orwell",
+      "author_id": 2,
+      "price": 7.99,
+      "genre": "Dystopian",
+      "genre_id": 2,
+      "publication_date": "1945-08-17"
+    },
+    {
+      "id": 6,
+      "title": "Tender Is the Night",
+      "author": "F. Scott Fitzgerald",
+      "author_id": 1,
+      "price": 11.99,
+      "genre": "Fiction",
+      "genre_id": 1,
+      "publication_date": "1934-04-12"
+    },
+    {
+      "id": 7,
+      "title": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "author_id": 5,
+      "price": 10.99,
+      "genre": "Fiction",
+      "genre_id": 1,
+      "publication_date": "1951-07-16"
+    },
+    {
+      "id": 8,
+      "title": "Franny and Zooey",
+      "author": "J.D. Salinger",
+      "author_id": 5,
+      "price": 9.99,
+      "genre": "Fiction",
+      "genre_id": 1,
+      "publication_date": "1961-09-14"
+    },
+    {
+      "id": 9,
+      "title": "Go Set a Watchman",
+      "author": "Harper Lee",
+      "author_id": 3,
+      "price": 13.99,
+      "genre": "Fiction",
+      "genre_id": 1,
+      "publication_date": "2015-07-14"
+    },
+    {
+      "id": 10,
+      "title": "Fahrenheit 451",
+      "author": "Ray Bradbury",
+      "author_id": 6,
+      "price": 12.99,
+      "genre": "Dystopian",
+      "genre_id": 2,
+      "publication_date": "1953-10-19"
+    },
+    {
+      "id": 11,
+      "title": "The Martian Chronicles",
+      "author": "Ray Bradbury",
+      "author_id": 6,
+      "price": 14.99,
+      "genre": "Science Fiction",
+      "genre_id": 3,
+      "publication_date": "1950-05-04"
+    },
+    {
+      "id": 12,
+      "title": "Dandelion Wine",
+      "author": "Ray Bradbury",
+      "author_id": 6,
+      "price": 11.99,
+      "genre": "Fiction",
+      "genre_id": 1,
+      "publication_date": "1957-06-01"
+    },
+    {
+      "title": "Robots for the world",
+      "author": "MYK",
+      "price": "10.30",
+      "genre": "Mystery",
+      "publication_date": "2024-07-17",
+      "id": 13
+    },
+    {
+      "title": "Robots for the world v2",
+      "author": "MYK",
+      "price": "10.30",
+      "genre": "Mystery",
+      "publication_date": "2024-07-17",
+      "id": 14
+    },
+    {
+      "title": "Robots for the world v3",
+      "author": "MYK",
+      "price": "10.30",
+      "genre": "Mystery",
+      "publication_date": "2024-07-17",
+      "id": 15
+    },
+    {
+      "title": "The Martian",
+      "author": "Andy Weir",
+      "author_id": 3,
+      "price": 15.99,
+      "genre": "Science Fiction",
+      "genre_id": 2,
+      "publication_date": "2014-02-11",
+      "id": 16
+    },
+    {
+      "title": "Do Androids Dream of Electric Sheep",
+      "author": "Philip K. Dick",
+      "author_id": 3,
+      "price": 15.99,
+      "genre": "Science Fiction",
+      "genre_id": 2,
+      "publication_date": "1974",
+      "id": 17
+    },
+    {
+      "title": "Do Androids Dream of Electric Sheep",
+      "author": "Philip K. Dick",
+      "author_id": 3,
+      "price": 15.99,
+      "genre": "Science Fiction",
+      "genre_id": 2,
+      "publication_date": "1974",
+      "id": 18
+    },
+    {
+      "title": "Do Androids Dream of Electric Sheep",
+      "author": "Philip K. Dick",
+      "author_id": 3,
+      "price": 15.99,
+      "genre": "Science Fiction",
+      "genre_id": 2,
+      "publication_date": "1974",
+      "id": 19
+    },
+    {
+      "title": "Do Androids Dream of Electric Sheep",
+      "author": "Philip K. Dick",
+      "author_id": 3,
+      "price": 15.99,
+      "genre": "Science Fiction",
+      "genre_id": 2,
+      "publication_date": "1974",
+      "id": 20
+    },
+    {
+      "title": "Do Androids Dream of Electric Sheep",
+      "author": "Philip K. Dick",
+      "author_id": 3,
+      "price": 15.99,
+      "genre": "Science Fiction",
+      "genre_id": 2,
+      "publication_date": "1974",
+      "id": 21
+    }
+  ]
+}

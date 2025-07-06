@@ -2,19 +2,20 @@
 <!--Handle bars é um template de engine. É uma lib. de javascript-->
 
 
-{{#if loggedIn}} <!-- Aqui é uma função nativa -->
-You are logged in as {{username}} <!--Aqui é uma variável username-->
-<button>LOGOUT</button>
-
-{{/if}}
+{{#if loaded}} <!-- Aqui é uma função nativa -->
 
 <h1>{{title}}</h1> <!--Aqui é uma variável title-->
-<p>{{content}}</p> <!--Aqui é uma variável content-->
 
 <ol>
-    {{#each items}} <!-- Aqui é uma função nativa -->
+    {{#each books}} <!-- Aqui é uma função nativa -->
     <li>
-        {{title}} - {{description}} <!--Aqui é uma variável title e description-->
+        {{title}} - {{author}} <!--Aqui é uma variável title e description-->
     </li>
     {{/each}} <!-- Aqui é uma função nativa -->
 </ol>
+
+{{else}}
+
+<h2>Please, wait - data loading...</h2>
+
+{{/if}}
