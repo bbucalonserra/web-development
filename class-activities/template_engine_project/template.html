@@ -1,0 +1,20 @@
+<!--Esses {{}} são HANDLEBARS. Dentro pode ir variável ou funções nativas que são chamadas de helpers. Helers são instruções especiais nativas-->
+<!--Handle bars é um template de engine. É uma lib. de javascript-->
+
+
+{{#if loggedIn}} <!-- Aqui é uma função nativa -->
+You are logged in as {{username}} <!--Aqui é uma variável username-->
+<button>LOGOUT</button>
+
+{{/if}}
+
+<h1>{{title}}</h1> <!--Aqui é uma variável title-->
+<p>{{content}}</p> <!--Aqui é uma variável content-->
+
+<ol>
+    {{#each items}} <!-- Aqui é uma função nativa -->
+    <li>
+        {{title}} - {{description}} <!--Aqui é uma variável title e description-->
+    </li>
+    {{/each}} <!-- Aqui é uma função nativa -->
+</ol>
