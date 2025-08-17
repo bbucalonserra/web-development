@@ -1,0 +1,9 @@
+.image-fixed {
+    width: 300px;
+    height: auto
+}
+
+.image-responsive {
+    width: 50%;
+    height: auto;
+}
