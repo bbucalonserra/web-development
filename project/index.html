@@ -1,0 +1,65 @@
+<!--Tag to communicate with browser for it to be treated as HTML.-->
+<!DOCTYPE html>
+
+<!--Tag to communicate with browser to start to interpret the HTML. The language is a type of codification for the browser to interpret. The entire project must be inside this tag.-->
+<html lang="en">
+
+<!--Tag to hold metadata about the page (title, styles, script), NOT the visible content.-->
+<head>
+    <title>History of the internet in Brazil</title> <!--Title showed in the browser tab.-->
+
+    <!--Tag to provide metadata. It is an empty tag (does not close).-->
+    <meta charset="UTF-8"> <!--Style of codification-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--How the webpage is going to behave in different screens (iOS, Android, etc.), starting with scale 1.0.-->
+    <script src="handlebars.js"></script> <!--Importing handle bars.-->
+</head>
+
+<!--The most dynamic part of the html. Here it goes all visible content for user. Such as images, text, etc.-->
+<body>
+    <!--Top section, usually contains logo, title, or navigation (semantic tag).-->
+    <header>
+        <h1>History of the internet in Brazil</h1> <!--The visual title. Only allowed one h1 per page (per html).-->
+        <p>Check out the history of the internet in Brazil, from when it started until current days.</p> <!--Paragraph of the header.-->
+    </header>
+
+    <!--Central section, hold the webpage main content (semantic tag).-->
+    <main>
+        <!--Divide the main into sections (semantic tag).-->
+        <section>
+            <h2>How it started.</h2> <!--Title of the section.-->
+            <p> <!--First paragraph inside the section. -->
+                <strong>On 18 April 1989</strong>, <!--Highlights content with STRONG IMPORTANCE. It looks bold but in HTML, it's used to point importance.-->
+                <abbr title="Internet Assigned Numbers Authority">IANA</abbr> <!--Abbreviation for IANA (when you hover over the text)-->
+                delegated the 
+                <abbr title="country code top-level domain (ccTLD) for Brazil">.br</abbr>  <!--Abbreviation for .br (when you hover over the text)-->
+                country code to 
+                <abbr title="São Paulo Research Foundation">FAPESP</abbr>. <!--Abbreviation for FAPESP (when you hover over the text)--> 
+                The request originally aimed to provide a uniform naming scheme for hosts using 
+                <abbr title="Unix-to-Unix Copy Protocol">UUCP</abbr> <!--Abbreviation for UUCP (when you hover over the text)--> 
+                , and was later used for the Internet as 
+                <abbr title="Transmission Control Protocol / Internet Protocol">TCP/IP</abbr> <!--Abbreviation for TCP/IP (when you hover over the text)-->
+                access arrived in Brazil.
+
+                <br> <!--Line break (forces content to continue on a new line).-->
+                <strong>In 1990</strong> <!--Highlights content with STRONG IMPORTANCE. It looks bold but in HTML, it's used to point importance.-->
+                , Michael Stanton (PUC-Rio) requested an IP address block from IANA; the assignment was a Class B (139.82.x.x), typical for large institutions at the time.
+                
+                <br> <!--Line break (forces content to continue on a new line).-->
+                Those addresses began to be used from 
+                <strong>April 1991</strong> <!--Highlights content with STRONG IMPORTANCE. It looks bold but in HTML, it's used to point importance.-->
+                , when 
+                <abbr title="National Laboratory for Scientific Computing">LNCC</abbr> <!--Abbreviation for LNCC (when you hover over the text)-->
+                connected to FAPESP. Around then, FAPESP secured additional Class B blocks for 
+                <em>UNICAMP, USP, and FAPESP</em> <!--Hightlights content with MEDIUM IMPORTANCE. It looks like italic but in HTML, it's used to point importance.--> 
+                (143.106.x.x; 143.107.x.x; 143.108.x.x) to enable the academic Internet backbone
+            </p>
+
+        </section>
+    </main>
+
+    <!--Bottom section, usually contain contact information, copyright and links (semantic tag).-->
+    <footer>
+
+    </footer>
+</body>
+</html>
