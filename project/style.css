@@ -4,6 +4,7 @@
     margin: 0; /*Removed margin to have better control in each part of the page.*/
     padding: 0; /*Removed padding to have better control in each part of the page.*/
     box-sizing: border-box; /*Define how to write the height and width of elements. Border-box we'll change the height and width until the border.*/
+    list-style: none; /*Remove the bullet points.*/
 }
 
 body {
@@ -13,30 +14,62 @@ body {
     font-weight: 400;
 }
 
-header {
-    display: grid; /*Put the elements side by side according to the number of elements inside the header. There're three.*/
-    grid-template-columns: 1fr auto 1fr; /*Each column, first 1fr, second auto and third 1fr.*/
-    align-items: center; 
-    text-align: center;
+header .logo {
+    width: 90vw;
+    top: 0;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
     padding: 2rem; /*Using rem to adjust what the user choose. Not fixed. ("RElative Measure")*/
     background-color: #dedede;
     color: black;
 }
 
-header h1 {
-    justify-self: center;
-    margin: 0;
+header button {
+    display: block;
+    margin: 20px auto; /* centralizado, mas você pode alinhar como quiser */
+    padding: 8px 16px;
+    cursor: pointer;
 }
 
-header #colorblind-toggle {
-    justify-self: end;
+header button {
+    height: 30px;
+    width: 140px;
 }
 
+header nav ul {
+    display: flex;
+    gap: 48px
+}
 
+header nav ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 5px 0px;
+}
 
+header nav ul li::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 0px;
+    height: 2px;
+    background-color: black;
+    transition: width 0.2s ease;
 
+}
 
+header nav ul li:hover::after {
+    width: 100%;
+}
 
+main {
+    padding-top: 150px;
+    padding-left: 50px;
+}
 
 
 
