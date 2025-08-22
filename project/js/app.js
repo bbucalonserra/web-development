@@ -1,18 +1,25 @@
 function loadAndRender() {
+  var fileName = window.location.pathname.split("/").pop();
+  var pageKey = fileName.replace(".html", "");
+
   fetch("data.json")
     .then(function (res) {
       if (!res.ok) throw new Error("HTTP error " + res.status);
       return res.json();
     })
     .then(function (data) {
-      // Compile Handlebars template
+      var pageData = data.pages.find(p => p.page === pageKey);
+
+      if (!pageData) {
+        document.querySelector("main").innerHTML = "<p>Page not found.</p>";
+        return;
+      }
+
       var source = document.getElementById("section-template").innerHTML;
-      var template = Handlebars.compile(source); // Handlebars vem do handlebars.js
+      var template = Handlebars.compile(source);
 
-      // Como o JSON tem "pages", pegamos a primeira página
-      var html = template(data.pages[0]);
+      var html = template(pageData);
 
-      // Inserir dentro de <main>
       document.querySelector("main").innerHTML = html;
     })
     .catch(function (err) {
