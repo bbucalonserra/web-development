@@ -14,34 +14,36 @@ body {
     font-weight: 400;
 }
 
-header .logo {
-    width: 90vw;
-    top: 0;
-    padding: 20px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 3;
-    padding: 2rem; /*Using rem to adjust what the user choose. Not fixed. ("RElative Measure")*/
-    background-color: #dedede;
-    color: black;
+header {
+  display: grid; /* use grid for explicit rows/cols */
+  grid-template-columns: repeat(2, auto) 1fr; /*Repeat 2 autos and 1 fr. "fr" is fractional unit, so the available fraction of the container. Example: width 900px, 1fr 1fr 1fr = 300px each.*/
+  grid-template-rows: auto; /*1 row.*/
+  align-items: center; /* vertical align*/
+  column-gap: 2rem; /* space between logo and nav */
+  padding: 1rem 0rem 1rem 2rem; /*Order: top - right - bottom - left*/
+  background: #DEDEDE;
+  color: black;
+}
+
+.logo-image {
+    width: 150px;
+    height: auto;
 }
 
 header button {
-    display: block;
-    margin: 20px auto; /* centralizado, mas você pode alinhar como quiser */
-    padding: 8px 16px;
-    cursor: pointer;
-}
-
-header button {
+    justify-self: end; /*Where the item goes in the page. This case go to the end (right). Could be start (right), end (left), center (middle), stretch (expand).*/
     height: 30px;
     width: 140px;
+    cursor: pointer;
+    margin-right: 20px;
 }
 
 header nav ul {
-    display: flex;
-    gap: 48px
+    font-size:20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /*Repeat four times the auto!*/
+    align-items: center;
+    column-gap: 2rem;
 }
 
 header nav ul li {
@@ -59,27 +61,85 @@ header nav ul li::after {
     height: 2px;
     background-color: black;
     transition: width 0.2s ease;
-
 }
 
 header nav ul li:hover::after {
     width: 100%;
 }
 
-main {
-    padding-top: 150px;
-    padding-left: 50px;
+main section {
+    font-size:large;
+    grid-template-rows: auto auto;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 6rem;
+    padding-left: 2rem;
+    border-radius: 20px;
+    width: 80%;
+}
+
+main h2 {
+    padding-bottom: 2rem;
+}
+
+main p {
+    max-width: 100ch; /*character unit*/
+    line-height: 1.6;
+}
+
+.section-1 {
+    font-size: 20px;
+    color: white;
+    background-color: #008080;
+}
+
+.section-2 {
+    font-size: 20px;
+    color: black;
+    background-color: #F5F5DC;
+}
+
+.section-3 {
+    font-size: 20px;
+    color: white;
+    background-color: #3A3A3A;
+    margin-bottom: 8rem;
 }
 
 
-
-.logo-image {
-    width: 150px;
-    height: auto;
+footer {
+    background: #DEDEDE;
+    font-size: 14px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto auto auto;
+    padding: 2rem;
 }
 
+.logo {
+    grid-row-start: 1; /*Its the guide linse, not rows!!!!*/
+    grid-row-end: 3;
+}
 
-.body-image {
-    width: 300px;
-    height: auto;
+.history-text {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    justify-self: center; 
+    align-self: center;
+}
+
+.policy-etc {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    justify-self: center; 
+    align-self: center;
+}
+
+.policy-etc {
+  display: flex;   /* coloca os <a> lado a lado */
+  gap: 2rem;       /* espaço ENTRE cada link (mude 1rem para 20px, etc.) */
 }

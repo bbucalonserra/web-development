@@ -20,100 +20,108 @@
     <!--Top section, usually contains logo, title, or navigation (semantic tag).-->
     <header>
         
-        <div class="logo">
-            <img src="./assets/pictures/uol_logo.png", class="logo-image">
+        <img src="./assets/pictures/uol_logo.png", class="logo-image">
 
-            <nav> <!--Navegation bar-->
-                <ul> <!--Unordered List-->
-                    <li>Home</li> <!--Link 1-->
-                    <li>Page 1</li> <!--Link 2-->
-                    <li>Page 2</li> <!--Link 3-->
-                    <li>Page 3</li> <!--Link 4-->
-                </ul>
-            </nav>
-        </div>
+        <nav> <!--Navegation bar-->
+            <ul> <!--Unordered List-->
+                <li>Home</li> <!--Link 1-->
+                <li>Page 1</li> <!--Link 2-->
+                <li>Page 2</li> <!--Link 3-->
+                <li>Page 3</li> <!--Link 4-->
+            </ul>
+        </nav>
+
+        <button id="colorblind-toggle">Colorblind Mode</button> <!--Button for colorblind mode.-->
 
         <!-- <h1>Delegation of ".br"</h1> The visual title. Only allowed one h1 per page (per html). -->
-        
-        <button id="colorblind-toggle">Colorblind Mode</button> <!--Button for colorblind mode.-->
 
     </header>
 
     <!--Central section, hold the webpage main content (semantic tag).-->
     <main>
         <!--SECTION 1: Divide the main into sections (semantic tag).-->
-        <section>
+        <section class="section-1">
             <!--Title of the section. It's grouped by content.-->
             <h2>
                 The Beginning of .br (1989–1991)
             </h2>
 
-            <p> <!--First paragraph inside the section. -->
-                <figure> <!--Tag to be able to add caption.-->
-                    <img src="./assets/pictures/computer.png" alt="Image of a computer." class="body-image"> <!--Import an image for the text in this section.-->
-                    <figcaption>Figure 1: Image of a computer.</figcaption>
-                </figure>
-                <br> <!--Line break (forces content to continue on a new line).-->
-                <strong>On 18 April 1989</strong>, <!--Highlights content with STRONG IMPORTANCE. It looks bold but in HTML, it's used to point importance.-->
-                <abbr title="Internet Assigned Numbers Authority">IANA</abbr> <!--Abbreviation for IANA (when you hover over the text)-->
-                delegated the 
-                <abbr title="country code top-level domain (ccTLD) for Brazil">.br</abbr>  <!--Abbreviation for .br (when you hover over the text)-->
-                country code to 
-                <abbr title="São Paulo Research Foundation">FAPESP</abbr>. <!--Abbreviation for FAPESP (when you hover over the text)--> 
-                The request originally aimed to provide a uniform naming scheme for hosts using 
-                <abbr title="Unix-to-Unix Copy Protocol">UUCP</abbr> <!--Abbreviation for UUCP (when you hover over the text)--> 
-                , and was later used for the Internet as 
-                <abbr title="Transmission Control Protocol / Internet Protocol">TCP/IP</abbr> <!--Abbreviation for TCP/IP (when you hover over the text)-->
-                access arrived in Brazil.
+            <p> <!--Paragraph inside the section.-->
+                The origins of the Internet in Brazil cannot be understood without looking at its 
+                <strong>international background</strong>. <!--Highlights importance of international context.-->
+                In the United States, the 
+                <abbr title="Advanced Research Projects Agency Network">ARPANET</abbr> <!--Abbreviation for ARPANET.-->
+                had already proven the use of 
+                <abbr title="Packet Switching Technology">packet switching</abbr> <!--Abbreviation for packet switching.-->
+                as a reliable way of connecting computers across distances. 
+                These early experiments became the reference model for many nations, 
+                including Brazil, that aimed to build their own academic networks.
             </p>
+
         </section>
 
         <!--SECTION 2: Divide the main into sections (semantic tag).-->
-        <section>
+        <section class="section-2">
             <h2> <!--Title of the section. It's grouped by content.-->
                 First IP Blocks (1990)
             </h2>
-            <p> <!--First paragraph inside the section. -->
-                <figure> <!--Tag to be able to add caption.-->
-                    <img src="./assets/pictures/block.png" alt="Image of a block." class="body-image"> <!--Import an image for the text in this section.-->
-                    <figcaption>Figure 2: Image of a block.</figcaption>
-                </figure>
-                <br> <!--Line break (forces content to continue on a new line).-->
-                <strong>In 1990</strong> <!--Highlights content with STRONG IMPORTANCE. It looks bold but in HTML, it's used to point importance.-->
-                , Michael Stanton (PUC-Rio) requested an IP address block from IANA; the assignment was a Class B (139.82.x.x), typical for large institutions at the time.
+
+            <p> <!--Paragraph inside the section.-->
+                In the <strong>1980s</strong>, <!--Highlights the decade of the first Brazilian steps.-->
+                universities and research centers started to experiment with data communication. 
+                Among the pioneers were the 
+                <abbr title="University of São Paulo">USP</abbr>, <!--Abbreviation for USP.-->
+                <abbr title="University of Campinas">Unicamp</abbr>, <!--Abbreviation for Unicamp.-->
+                <abbr title="National Laboratory for Scientific Computing">LNCC</abbr>, <!--Abbreviation for LNCC.-->
+                and the 
+                <abbr title="Federal University of Rio de Janeiro">UFRJ</abbr>. <!--Abbreviation for UFRJ.-->
+                These institutions connected to international networks such as 
+                <abbr title="Because It’s Time Network">BITNET</abbr>, <!--Abbreviation for BITNET.-->
+                allowing the exchange of academic messages and collaboration with foreign researchers.
             </p>
+
         </section>
 
         <!--SECTION 3: Divide the main into sections (semantic tag).-->
-        <section>
+        <section class="section-3">
             <h2> <!--Title of the section. It's grouped by content.-->
                 First Connections and Structure (1991)
             </h2>
-            <p> <!--First paragraph inside the section. -->
-                <figure> <!--Tag to be able to add caption.-->
-                    <img src="./assets/pictures/book.png" alt="Image of a book." class="body-image"> <!--Import an image for the text in this section.-->
-                    <figcaption>Figure 3: Image of a book.</figcaption>
-                </figure>
-                Those addresses began to be used from 
-                <strong>April 1991</strong> <!--Highlights content with STRONG IMPORTANCE. It looks bold but in HTML, it's used to point importance.-->
-                , when 
-                <abbr title="National Laboratory for Scientific Computing">LNCC</abbr> <!--Abbreviation for LNCC (when you hover over the text)-->
-                connected to FAPESP. Around then, FAPESP secured additional Class B blocks for 
-                <em>UNICAMP, USP, and FAPESP</em> <!--Hightlights content with MEDIUM IMPORTANCE. It looks like italic but in HTML, it's used to point importance.--> 
-                (143.106.x.x; 143.107.x.x; 143.108.x.x) to enable the academic Internet backbone
+
+            <p> <!--Paragraph inside the section.-->
+                A key milestone came in 
+                <strong>1987</strong>, <!--Highlights the year of UFRJ connection.-->
+                when the 
+                <abbr title="Defense Advanced Research Projects Agency">DARPA</abbr> <!--Abbreviation for DARPA.-->
+                and the 
+                <abbr title="National Science Foundation">NSF</abbr> <!--Abbreviation for NSF.-->
+                authorized the 
+                <abbr title="Federal University of Rio de Janeiro">UFRJ</abbr> <!--Abbreviation for UFRJ.-->
+                to officially connect to the Internet in the United States.  
+                Soon after, in 
+                <strong>1989</strong>, <!--Highlights the year RNP was created.-->
+                the Brazilian government launched the 
+                <abbr title="National Research Network">RNP</abbr>, <!--Abbreviation for RNP.-->
+                the first nationwide academic backbone, 
+                which interconnected universities and research institutions.  
+                This initiative created a collaborative scientific environment and laid the 
+                foundation for the future 
+                <abbr title="Transmission Control Protocol / Internet Protocol">TCP/IP</abbr> <!--Abbreviation for TCP/IP.-->
+                expansion across the country.
             </p>
+
         </section>  
     </main>
 
     <!--Bottom section, usually contain contact information, copyright and links (semantic tag).-->
-    <footer>
-        <p> <!--Paragraph of the header.-->
-            &copy 2025 History of Internet in Brazil. All rights reserved. <!--The "&" represents a symbol to be added. E.g. &gt (greater than) is >, &lt (less than) is <, etc.-->
-        </p>
-
-        <p>
-            To know in depth about the history of the internet in Brazil, check the article <a href="https://www.cos.ufrj.br/uploadfile/1430748034.pdf" target="_blank"> here</a>.
-        </p>
-    </footer>
+<footer>
+    <div class="logo"><img src="./assets/pictures/uol_logo.png" alt="Logo" class="logo-image"></div>
+    <div class="history-text"> &copy; 2025 History of Internet in Brazil. All rights reserved. </div>
+    <div class="policy-etc">
+        <a href="privacy_policy.html">Privacy Policy</a> 
+        <a href="terms_of_use.html">Terms of Use</a> 
+        <a href="https://www.cos.ufrj.br/uploadfile/1430748034.pdf">Reference Article</a> 
+    </div>
+</footer>
 </body>
 </html>
