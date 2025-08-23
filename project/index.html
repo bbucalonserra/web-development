@@ -1,11 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Homepage</title> <!--Title showed in the browser tab.-->
+
+    <!--Tag to provide metadata. It is an empty tag (does not close).-->
+    <meta charset="UTF-8"> <!--Style of codification-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--How the webpage is going to behave in different screens (iOS, Android, etc.), starting with scale 1.0.-->
+    <link rel="stylesheet" href="style.css">
+    <script src="handlebars.js"></script> <!--Importing handle bars.-->
+    <script src="script.js"></script>
+    <script src="app.js"></script>
 </head>
 <body>
-    HOMEPAGE!!!!!!!!
+    <!--Top section, usually contains logo, title, or navigation (semantic tag).-->
+    <header>
+        
+        <img src="./assets/pictures/uol_logo.png", class="logo-image">
+
+        <nav> <!--Navegation bar-->
+            <ul> <!--Unordered List-->
+                <li><a href="index.html">Home</a></li> <!--Link 1-->
+                <li><a href="first_steps_internet.html">Page 1</a></li> <!--Link 2-->
+                <li><a href="the-commercial-internet-and-popularization.html">Page 2</a></li> <!--Link 3-->
+                <li><a href="the-internet-in-contemporary-brazil.html">Page 3</a></li> <!--Link 3-->
+            </ul>
+        </nav>
+
+        <button id="colorblind-toggle">Colorblind Mode</button> <!--Button for colorblind mode.-->
+
+        <!-- <h1>Delegation of ".br"</h1> The visual title. Only allowed one h1 per page (per html). -->
+
+    </header>
 </body>
 </html>
