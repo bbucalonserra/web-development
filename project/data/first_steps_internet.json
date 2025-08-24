@@ -1,0 +1,21 @@
+{
+  "title": "First Steps of the Internet in Brazil",
+  "loaded": true,
+  "sections": [
+    {
+      "title": "International Roots of Brazil’s Internet",
+      "text": "The origins of the Internet in Brazil cannot be understood without looking at its <strong>international background</strong>. In the United States, the <abbr title=\"Advanced Research Projects Agency Network\">ARPANET</abbr> had already proven the use of <abbr title=\"Packet Switching Technology\">packet switching</abbr> as a reliable way of connecting computers across distances. These early experiments became the reference model for many nations, including Brazil, that aimed to build their own academic networks.",
+      "sectionClass": "section-1"
+    },
+    {
+      "title": "Universities Connecting Abroad",
+      "text": "In the <strong>1980s</strong>, universities and research centers started to experiment with data communication. Among the pioneers were the <abbr title=\"University of São Paulo\">USP</abbr>, <abbr title=\"University of Campinas\">Unicamp</abbr>, <abbr title=\"National Laboratory for Scientific Computing\">LNCC</abbr>, and the <abbr title=\"Federal University of Rio de Janeiro\">UFRJ</abbr>. These institutions connected to international networks such as <abbr title=\"Because It’s Time Network\">BITNET</abbr>, allowing the exchange of academic messages and collaboration with foreign researchers.",
+      "sectionClass": "section-2"
+    },
+    {
+      "title": "From RNP to a National Internet Backbone",
+      "text": "A key milestone came in <strong>1987</strong>, when the <abbr title=\"Defense Advanced Research Projects Agency\">DARPA</abbr> and the <abbr title=\"National Science Foundation\">NSF</abbr> authorized the <abbr title=\"Federal University of Rio de Janeiro\">UFRJ</abbr> to officially connect to the Internet in the United States. Soon after, in <strong>1989</strong>, the Brazilian government launched the <abbr title=\"National Research Network\">RNP</abbr>, the first nationwide academic backbone, which interconnected universities and research institutions. This initiative created a collaborative scientific environment and laid the foundation for the future <abbr title=\"Transmission Control Protocol / Internet Protocol\">TCP/IP</abbr> expansion across the country.",
+      "sectionClass": "section-3"
+    }
+  ]
+}

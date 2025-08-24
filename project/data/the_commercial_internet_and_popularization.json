@@ -1,0 +1,21 @@
+{
+  "title": "The Commercial Internet and Popularization",
+  "loaded": true,
+  "sections": [
+    {
+      "title": "The Arrival of Commercial Internet",
+      "text": "In 1995, the Brazilian government authorized private companies to provide internet access, ending its exclusively academic character. Embratel, then a state-owned company, was among the first to offer dial-up services. Soon after, providers such as Mandic, Universo Online (UOL), and Brasil Online (BOL) became familiar names to the first Brazilian internet users.",
+      "sectionClass": "section-1"
+    },
+    {
+      "title": "Broadband and Digital Inclusion (2000s)",
+      "text": "The spread of broadband connections gradually replaced dial-up, allowing faster and more stable access. This period also saw the growth of government initiatives for digital inclusion, such as telecenters and computer labs in public schools, which helped reduce the digital divide. The arrival of personal computers in more households expanded access to online services.",
+      "sectionClass": "section-2"
+    },
+    {
+      "title": "Web 2.0 and Social Networks",
+      "text": "The rise of Web 2.0 gave users a central role in creating and sharing content. In Brazil, Orkut became a cultural phenomenon, dominating social interactions online. Alongside Orkut, platforms like blogs, instant messaging services such as MSN Messenger, and the first e-commerce websites marked the beginning of digital life for millions of Brazilians.",
+      "sectionClass": "section-3"
+    }
+  ]
+}

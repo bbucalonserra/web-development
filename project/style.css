@@ -12,9 +12,14 @@ body {
     color: #000000; /*Font colour.*/
     font-family: "Playfair Display", serif;
     font-weight: 400;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-
+html, body {
+    height: 100%;
+}
 
 /* ---------------------- */
 /* COLORBLIND MODE        */
@@ -74,9 +79,9 @@ header button {
 header nav ul {
     font-size:20px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /*Repeat four times the auto!*/
+    grid-template-columns: repeat(4, auto); /*Repeat four times the auto!*/
     align-items: center;
-    column-gap: 2rem;
+    column-gap: 1.5rem;
 }
 
 header nav ul li a {
@@ -84,7 +89,7 @@ header nav ul li a {
     color: inherit;
     cursor: pointer;
     position: relative;
-    padding: 5px 0px;
+    padding: 1px 0px;
 }
 
 
@@ -101,6 +106,10 @@ header nav ul li a::after {
 
 header nav ul li a:hover::after {
     width: 100%;
+}
+
+main {
+    flex: 1;
 }
 
 main section {
@@ -149,7 +158,7 @@ footer {
     background: #DEDEDE;
     font-size: 14px;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: 20% 10% 40% 10% 20%;
     grid-template-rows: auto auto auto;
     padding: 2rem;
 }
@@ -177,6 +186,6 @@ footer {
 
 .policy-etc {
   display: flex;   /* coloca os <a> lado a lado */
-  gap: 2rem;       /* espaço ENTRE cada link (mude 1rem para 20px, etc.) */
+  gap: 6em;       /* espaço ENTRE cada link (mude 1rem para 20px, etc.) */
 }
 
