@@ -1,15 +1,19 @@
+/* ---------------------- IMPORTS ---------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+/* ----------------------------------------------------- */
 
-* { /*Apply the configurations into all the webpage. CSS "reset*/
-    margin: 0; /*Removed margin to have better control in each part of the page.*/
-    padding: 0; /*Removed padding to have better control in each part of the page.*/
-    box-sizing: border-box; /*Define how to write the height and width of elements. Border-box we'll change the height and width until the border.*/
-    list-style: none; /*Remove the bullet points.*/
+
+/* ---------------------- RESET / BASE ---------------------- */
+* { /* Apply the configurations into the whole webpage. CSS "reset" */
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    list-style: none; 
 }
 
 body {
     background-color: #FDF6E3;
-    color: #000000; /*Font colour.*/
+    color: #000000; 
     font-family: "Playfair Display", serif;
     font-weight: 400;
     min-height: 100vh;
@@ -20,45 +24,17 @@ body {
 html, body {
     height: 100%;
 }
+/* --------------------------------------------------------- */
 
-/* ---------------------- */
-/* COLORBLIND MODE        */
-/* ---------------------- */
-body.colorblind-mode {
-    background-color: #FDF6E3; 
-    color: #000080;
-}
 
-/* Seções em modo colorblind */
-body.colorblind-mode .section-1 {
-    background-color: #007C91;
-    color: black;
-}
-
-body.colorblind-mode .section-2 {
-    background-color: #29B6C5;
-    color: #000;
-}
-
-body.colorblind-mode .section-3 {
-    background-color: #B2EBF2;
-    color: black;
-}
-
-/* Header e Footer no modo colorblind */
-body.colorblind-mode header,
-body.colorblind-mode footer {
-    background: #F0EAD6;
-    color: black;
-}
-
+/* ---------------------- HEADER ---------------------- */
 header {
-  display: grid; /* use grid for explicit rows/cols */
-  grid-template-columns: repeat(2, auto) 1fr; /*Repeat 2 autos and 1 fr. "fr" is fractional unit, so the available fraction of the container. Example: width 900px, 1fr 1fr 1fr = 300px each.*/
-  grid-template-rows: auto; /*1 row.*/
-  align-items: center; /* vertical align*/
-  column-gap: 2rem; /* space between logo and nav */
-  padding: 1rem 0rem 1rem 2rem; /*Order: top - right - bottom - left*/
+  display: grid; 
+  grid-template-columns: repeat(2, auto) 1fr; 
+  grid-template-rows: auto; 
+  align-items: center; 
+  column-gap: 2rem; 
+  padding: 1rem 0rem 1rem 2rem; 
   background: #F0EAD6;
   color: black;
 }
@@ -69,7 +45,7 @@ header {
 }
 
 header button {
-    justify-self: end; /*Where the item goes in the page. This case go to the end (right). Could be start (right), end (left), center (middle), stretch (expand).*/
+    justify-self: end; 
     height: 30px;
     width: 140px;
     cursor: pointer;
@@ -77,9 +53,9 @@ header button {
 }
 
 header nav ul {
-    font-size:20px;
+    font-size: 20px;
     display: grid;
-    grid-template-columns: repeat(4, auto); /*Repeat four times the auto!*/
+    grid-template-columns: repeat(4, auto); 
     align-items: center;
     column-gap: 1.5rem;
 }
@@ -91,7 +67,6 @@ header nav ul li a {
     position: relative;
     padding: 1px 0px;
 }
-
 
 header nav ul li a::after {
     content: "";
@@ -107,22 +82,21 @@ header nav ul li a::after {
 header nav ul li a:hover::after {
     width: 100%;
 }
+/* --------------------------------------------------- */
 
+
+/* ---------------------- MAIN ---------------------- */
 main {
     flex: 1;
 }
 
-
-
-
 .main-globe {
   height: 8rem;
-  margin: 0; /* tira as margens que empurravam */
+  margin: 0; 
 }
 
-
 main section {
-    font-size:large;
+    font-size: large;
     grid-template-rows: auto auto;
     margin-bottom: 2rem;
     margin-top: 2rem;
@@ -139,14 +113,17 @@ main h2 {
 }
 
 main p {
-    max-width: 100ch; /*character unit*/
+    max-width: 100ch; 
     line-height: 1.6;
 }
+/* -------------------------------------------------- */
 
+
+/* ---------------------- SECTIONS (DEFAULT) ---------------------- */
 .section-1 {
     font-size: 20px;
     color: black;
-    background-color: #FFD54F
+    background-color: #FFD54F;
 }
 
 .section-2 {
@@ -161,8 +138,10 @@ main p {
     background-color: #FFECB3;
     margin-bottom: 8rem;
 }
+/* ---------------------------------------------------------------- */
 
 
+/* ---------------------- FOOTER ---------------------- */
 footer {
     background: #F0EAD6;
     font-size: 14px;
@@ -173,7 +152,7 @@ footer {
 }
 
 .logo {
-    grid-row-start: 1; /*Its the guide linse, not rows!!!!*/
+    grid-row-start: 1; 
     grid-row-end: 3;
 }
 
@@ -194,7 +173,38 @@ footer {
 }
 
 .policy-etc {
-  display: flex;   /* coloca os <a> lado a lado */
-  gap: 6em;       /* espaço ENTRE cada link (mude 1rem para 20px, etc.) */
+  display: flex;   
+  gap: 6em;       
+}
+/* --------------------------------------------------- */
+
+
+/* ---------------------- COLORBLIND MODE ---------------------- */
+body.colorblind-mode {
+    background-color: #FDF6E3; 
+    color: #000080;
 }
 
+/* Sections in colorblind mode */
+body.colorblind-mode .section-1 {
+    background-color: #007C91;
+    color: black;
+}
+
+body.colorblind-mode .section-2 {
+    background-color: #29B6C5;
+    color: #000;
+}
+
+body.colorblind-mode .section-3 {
+    background-color: #B2EBF2;
+    color: black;
+}
+
+/* Header and Footer in colorblind mode */
+body.colorblind-mode header,
+body.colorblind-mode footer {
+    background: #F0EAD6;
+    color: black;
+}
+/* ------------------------------------------------------------- */
