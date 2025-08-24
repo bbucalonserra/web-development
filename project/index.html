@@ -31,6 +31,9 @@
         
     </header>
 
+    <main id="content">
+    </main>
+
     <footer>
         <div class="logo"><a href = "https://www.london.ac.uk/"><img src="./assets/pictures/uol_logo.png" alt="Logo" class="logo-image"></a></div>
         <div class="history-text"> &copy; 2025 History of Internet in Brazil. All rights reserved. </div>
@@ -40,6 +43,28 @@
             <a href="https://www.cos.ufrj.br/uploadfile/1430748034.pdf">Reference Article</a> 
         </div>
     </footer>
+
+    <script id="handle-template" type="text/x-handlebars-template">
+        <div class="container">
+            <div class="slider-wrapper">
+                <div class="slider">
+                    {{#each phrases}}
+                        <!--@index enumrates according to "each"-->
+                        <p id="slide-{{@index}}">{{text}}</p>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-nav">
+            {{#each phrases}}
+                <a href="#slide{{@index}}">{{@index}}</a>
+            {{/each}}
+        </div>
+
+
+    </script>
+
 
 </body>
 </html>

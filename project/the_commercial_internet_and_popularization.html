@@ -54,16 +54,16 @@
         </div>
     </footer>
 
-<script id="section-template" type="text/x-handlebars-template">
-{{#each sections}} <!--Everything that is inside each is going to be repeated like a loop.-->
-    <section class="{{sectionClass}}">
-    <div class="container">
-        <h2>{{title}}</h2>
-        <p>{{{text}}}</p>
-    </div>
-    </section>
-{{/each}}
-</script>
+    <script id="handle-template" type="text/x-handlebars-template">
+    {{#each sections}} <!--Everything that is inside each is going to be repeated like a loop.-->
+        <section class="{{sectionClass}}">
+        <div class="container">
+            <h2>{{title}}</h2>
+            <p>{{{text}}}</p>
+        </div>
+        </section>
+    {{/each}}
+    </script>
 
 </body>
 </html>

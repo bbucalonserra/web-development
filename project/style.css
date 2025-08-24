@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
 
-* { /*Apply the configurations into all the webpage.*/
+* { /*Apply the configurations into all the webpage. CSS "reset*/
     margin: 0; /*Removed margin to have better control in each part of the page.*/
     padding: 0; /*Removed padding to have better control in each part of the page.*/
     box-sizing: border-box; /*Define how to write the height and width of elements. Border-box we'll change the height and width until the border.*/
@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: white;
+    background-color: #FDF6E3;
     color: #000000; /*Font colour.*/
     font-family: "Playfair Display", serif;
     font-weight: 400;
@@ -25,7 +25,7 @@ html, body {
 /* COLORBLIND MODE        */
 /* ---------------------- */
 body.colorblind-mode {
-    background-color: #F5F5DC; 
+    background-color: #FDF6E3; 
     color: #000080;
 }
 
@@ -48,7 +48,7 @@ body.colorblind-mode .section-3 {
 /* Header e Footer no modo colorblind */
 body.colorblind-mode header,
 body.colorblind-mode footer {
-    background: #C0C0C0;
+    background: #F0EAD6;
     color: black;
 }
 
@@ -59,7 +59,7 @@ header {
   align-items: center; /* vertical align*/
   column-gap: 2rem; /* space between logo and nav */
   padding: 1rem 0rem 1rem 2rem; /*Order: top - right - bottom - left*/
-  background: #DEDEDE;
+  background: #F0EAD6;
   color: black;
 }
 
@@ -112,6 +112,15 @@ main {
     flex: 1;
 }
 
+
+
+
+.main-globe {
+  height: 8rem;
+  margin: 0; /* tira as margens que empurravam */
+}
+
+
 main section {
     font-size:large;
     grid-template-rows: auto auto;
@@ -155,7 +164,7 @@ main p {
 
 
 footer {
-    background: #DEDEDE;
+    background: #F0EAD6;
     font-size: 14px;
     display: grid;
     grid-template-columns: 20% 10% 40% 10% 20%;

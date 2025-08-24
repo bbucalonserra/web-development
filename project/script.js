@@ -10,14 +10,14 @@ In the browser, there're always two global objects: window (the tab) and documen
 document.addEventListener("DOMContentLoaded", function() {
 
     // The get element by id searches in the HTML where the id "template" is. IT'S THE RAW OF WHAT IS WRITTEN IN THE HTML(example: <section)... classs.. <div>...)
-    const source = document.getElementById("section-template").innerHTML;
+    const source = document.getElementById("handle-template").innerHTML;
     
     // Variable that becomes a function to render the data (non-js native)
     const template = Handlebars.compile(source);
 
-    // "Cleans" the elements inside the script (in thi case, section-template). It cleans everything, therefore nothing is returned.
+    // "Cleans" the elements inside the script (in thi case, handle-template). It cleans everything, therefore nothing is returned.
     // This is done because there's no reason to leave it stored in DOM. It avoids polution in the brownser (when inspected).
-    document.getElementById("section-template").innerHTML = "";
+    document.getElementById("handle-template").innerHTML = "";
     
     // Configuring the variable data to start with false.
     let data = { loaded: true };
@@ -48,9 +48,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Creates a function to put loaded as true, and then to get the sections.
         .then(jsondata => {
+            
+            // Values from fetch
+            const currentFile = "data/" + window.location.pathname.split("/")[2].split(".")[0] + ".json";
+
             data = {
                 loaded: true,
-                sections: jsondata.sections
+                [currentFile == "data/index.json" ? "phrases" : "sections"]: currentFile === "data/index.json" ? jsondata.phrases : jsondata.sections
             };
             render();
         });
