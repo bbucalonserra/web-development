@@ -1,33 +1,31 @@
-// THIS SCRIPT WILL RUNS WHEN THE BROWSER FINDS THE SCRIPT TAG IN THE HTML.
+// THE SCRIPT WILL RUNS WHEN THE BROWSER FINDS THE SCRIPT TAG IN THE HTML. HOWEVER WE ADDED A DEFER, THEREFORE IT WILL RUN AFTER THE HTML IS ALREADY LOADED (AFTER HANDDLEBAR). 
 
 // --------------------------- Change slider color --------------------------- 
 const main_anchors = function () {
-    // Creating links variable(for each acnhor inside main)
+    // Grab all anchors inside <main>
     let links = document.querySelectorAll("main a");
 
-    // The forEach function (native js) expects a callback function. forEach(function(item, index, array)). Link here inside the function is a single anchor.
-    // Runs the quantity of anchors we have in main a.
+    // Go through each anchor once to set a click listener
     links.forEach(function(anchor) {
 
-        // addEventListener = element.addEventListener(type, listener, options). type = click, mouseover; listener = anonynmous function; options = boolean.
-        // For each anchor insde the links (main a), it receives a listener for clicks.
-        // The annonymous function must have what is the event.
+        // When this anchor is clicked, run the function below
         anchor.addEventListener("click", function() {
-            // For each of the anchors, we'll remove the class active.
-            links.forEach(function(eachAnchor) {
 
-                // The classList could be: remove, add, hidden. Manipulates the class of DOM. Here we'll remove the active.
+            // First, remove "active" from ALL anchors
+            links.forEach(function(eachAnchor) {
                 eachAnchor.classList.remove("active");
             });
 
-            // We'll add the active. By using this, we'll set as active when clicked.
-            this.classList.add("active")
+            // Then, add "active" ONLY to the one that was clicked
+            this.classList.add("active");
+
+
+            // TEST
+            links.forEach(function(eachAnchor) {
+                console.log(eachAnchor.textContent, eachAnchor.classList.value);
+            });
         });
     });
-
-
-
-    console.log(links);
 }
 // ------------------------------------------------------ 
 
