@@ -1,5 +1,35 @@
 // THIS SCRIPT WILL RUNS WHEN THE BROWSER FINDS THE SCRIPT TAG IN THE HTML.
 
+// --------------------------- Change slider color --------------------------- 
+const main_anchors = function () {
+    // Creating links variable(for each acnhor inside main)
+    let links = document.querySelectorAll("main a");
+
+    // The forEach function (native js) expects a callback function. forEach(function(item, index, array)). Link here inside the function is a single anchor.
+    // Runs the quantity of anchors we have in main a.
+    links.forEach(function(anchor) {
+
+        // addEventListener = element.addEventListener(type, listener, options). type = click, mouseover; listener = anonynmous function; options = boolean.
+        // For each anchor insde the links (main a), it receives a listener for clicks.
+        // The annonymous function must have what is the event.
+        anchor.addEventListener("click", function() {
+            // For each of the anchors, we'll remove the class active.
+            links.forEach(function(eachAnchor) {
+
+                // The classList could be: remove, add, hidden. Manipulates the class of DOM. Here we'll remove the active.
+                eachAnchor.classList.remove("active");
+            });
+
+            // We'll add the active. By using this, we'll set as active when clicked.
+            this.classList.add("active")
+        });
+    });
+
+
+
+    console.log(links);
+}
+// ------------------------------------------------------ 
 
 // --------------------------- Handle bars ---------------------------  
 /*
@@ -7,6 +37,7 @@ In the browser, there're always two global objects: window (the tab) and documen
 */
 //Structure: element.AddeventListener(eventType, CallbackFunction, options)
 // Event type could be: "click", "mouseover", "keydown", etc.
+// The DOMContentLoaded runs only when the initial HTML is already built in a tree.
 document.addEventListener("DOMContentLoaded", function() {
 
     // The get element by id searches in the HTML where the id "template" is. IT'S THE RAW OF WHAT IS WRITTEN IN THE HTML(example: <section)... classs.. <div>...)
@@ -35,6 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Perform HTTP calls. Is returns a PROMISE (object that will happen).
     // We could get that from a website for example.
     // USED STRING MANIPULATION TO SELECT THE PROPER JSON IN DATA!
+    // fetch is assyncronous
     fetch("data/" + window.location.pathname.split("/")[2].split(".")[0] + ".json")
         // Response is the object that came from the server. It transforms it into a json. It's a must because it will receive a pure string (even if it's alrady a json).
         // "=>" is an arrow function. "Get the value the arrives in response and return response.json"
@@ -56,12 +88,15 @@ document.addEventListener("DOMContentLoaded", function() {
                 loaded: true,
                 [currentFile == "data/index.json" ? "phrases" : "sections"]: currentFile === "data/index.json" ? jsondata.phrases : jsondata.sections
             };
-            render();
-        });
-    render();
-})
-// --------------------------- Handle bars ---------------------------  
 
+            // Renders the json
+            render();
+
+            // Calling anchors.
+            main_anchors();
+        });
+})
+// ------------------------------------------------------  
 
 
 // --------------------------- Colorblind --------------------------- 
@@ -82,4 +117,5 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-// --------------------------- Colorblind --------------------------- 
+// ------------------------------------------------------ 
+
