@@ -1,33 +1,28 @@
 // THE SCRIPT WILL RUNS WHEN THE BROWSER FINDS THE SCRIPT TAG IN THE HTML. HOWEVER WE ADDED A DEFER, THEREFORE IT WILL RUN AFTER THE HTML IS ALREADY LOADED (AFTER HANDDLEBAR). 
 
 // --------------------------- Change slider color --------------------------- 
-const main_anchors = function () {
-    // Grab all anchors inside <main>
-    let links = document.querySelectorAll("main a");
+function main_anchors() {
+    // Selects all slider dots inside <main>
+    document.querySelectorAll("main .slider-dot").forEach(anchor => {
+        anchor.addEventListener("click", function(event) {
+            // Prevents vertical scroll (it was scrolling vertically due to the href.)
+            event.preventDefault();
 
-    // Go through each anchor once to set a click listener
-    links.forEach(function(anchor) {
+            // Removes "active" from all dots
+            document.querySelectorAll("main .slider-dot").forEach(a => a.classList.remove("active"));
 
-        // When this anchor is clicked, run the function below
-        anchor.addEventListener("click", function() {
-
-            // First, remove "active" from ALL anchors
-            links.forEach(function(eachAnchor) {
-                eachAnchor.classList.remove("active");
-            });
-
-            // Then, add "active" ONLY to the one that was clicked
+            // Adds "active" to the clicked dot
             this.classList.add("active");
 
-
-            // TEST
-            links.forEach(function(eachAnchor) {
-                console.log(eachAnchor.textContent, eachAnchor.classList.value);
-            });
+            // Scrolls horizontally to the corresponding slide
+            const target = document.getElementById(this.getAttribute("href").slice(1));
+            if (target) {
+                target.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+            }
         });
     });
 }
-// ------------------------------------------------------ 
+// --------------------------------------------------------------------------
 
 // --------------------------- Handle bars ---------------------------  
 /*
@@ -84,7 +79,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
             data = {
                 loaded: true,
-                [currentFile == "data/index.json" ? "phrases" : "sections"]: currentFile === "data/index.json" ? jsondata.phrases : jsondata.sections
+                [currentFile == "data/index.json" ? "phrases" : "sections"]: currentFile === "data/index.json" ? jsondata.phrases : jsondata.sections,
+                tiles: jsondata.tiles || []
             };
 
             // Renders the json
@@ -94,26 +90,5 @@ document.addEventListener("DOMContentLoaded", function() {
             main_anchors();
         });
 })
-// ------------------------------------------------------  
-
-
-// --------------------------- Colorblind --------------------------- 
-document.addEventListener("DOMContentLoaded", function () {
-    var toggleButton = document.getElementById("colorblind-toggle");
-
-    if (localStorage.getItem("colorblind") === "on") {
-        document.body.classList.add("colorblind-mode");
-    }
-
-    toggleButton.addEventListener("click", function () {
-        document.body.classList.toggle("colorblind-mode");
-
-        if (document.body.classList.contains("colorblind-mode")) {
-            localStorage.setItem("colorblind", "on");
-        } else {
-            localStorage.setItem("colorblind", "off");
-        }
-    });
-});
-// ------------------------------------------------------ 
+// -----------------------------------------------------------------------
 

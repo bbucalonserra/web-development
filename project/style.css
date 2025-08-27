@@ -29,19 +29,14 @@ html, body {
 
 /* ---------------------- HEADER ---------------------- */
 header {
-  display: grid; 
-  grid-template-columns: repeat(2, auto) 1fr; 
-  grid-template-rows: auto; 
-  align-items: center; 
-  column-gap: 2rem; 
-  padding: 1rem 0rem 1rem 2rem; 
-  background: #F0EAD6;
-  color: black;
-}
-
-.logo-image {
-    width: 150px;
-    height: auto;
+    display: grid; 
+    grid-template-columns: auto auto 1fr auto; 
+    grid-template-rows: auto; 
+    align-items: center; 
+    column-gap: 2rem; 
+    padding: 1rem 0rem 1rem 2rem; 
+    background: #F0EAD6;
+    color: black;
 }
 
 header button {
@@ -49,15 +44,28 @@ header button {
     height: 30px;
     width: 140px;
     cursor: pointer;
-    margin-right: 20px;
+}
+
+.logo-image {
+    width: 200px;
+    height: auto;
 }
 
 header nav ul {
-    font-size: 20px;
-    display: grid;
-    grid-template-columns: repeat(4, auto); 
-    align-items: center;
-    column-gap: 1.5rem;
+        font-size: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1.2rem;
+}
+
+@media (max-width: 700px) {
+    header nav ul {
+        font-size: 18px;
+        gap: 0.5rem;
+        padding: 0.5rem 0;
+    }
 }
 
 header nav ul li a {
@@ -112,8 +120,7 @@ main section {
 .container {
     padding: 2rem;
     background-color: #3c9242;
-    font-size: 40px;
-    max-width: 100ch; 
+    font-size: 40px; 
     line-height: 1.6;
     color: white;
 }
@@ -143,6 +150,7 @@ main section {
     justify-content: center;
     align-items: center; 
     text-align: center;
+
 }
 
 .slider-nav {
@@ -164,6 +172,67 @@ main section {
 .slider-nav a.active {
     background-color: grey;
 }
+
+.tiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 30px;
+    align-items: center;
+    gap: 6rem;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+
+@media (max-width: 700px) {
+    .tiles {
+        flex-direction: column;
+        height: auto;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    #tile {
+        width: 95vw;
+        max-width: 400px;
+        height: auto;
+        padding-top: 2rem;
+        margin: 0 auto;
+    }
+    footer .policy-etc {
+        flex-direction: row;
+        gap: 1em;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+#tile {
+    color: #1F2937;
+    display: grid;
+    height: 40rem;
+    width: 100%;
+    max-width: 30rem;
+    min-width: 15rem;
+    justify-content: center; /* Horizontal. */
+    align-items: center; /* Vertical. */
+    text-align: center; /* Text itself. */
+    margin: 0; 
+    padding: 1rem;
+    background-color: #FFFCF5;
+    border: #DED6C8;
+    border-radius: 40px;
+    box-shadow: 4px 4px 8px #888888;
+}
+
+.tiles img {
+    width: 180px;
+    height: auto;
+    justify-self: center;
+    align-self: center;
+}
+
 
 /* -------------------------------------------------- */
 
@@ -196,13 +265,56 @@ footer {
     font-size: 14px;
     display: grid;
     grid-template-columns: 20% 10% 40% 10% 20%;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto;
     padding: 2rem;
 }
 
-.logo {
-    grid-row-start: 1; 
-    grid-row-end: 3;
+@media (max-width: 700px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        padding: 1rem;
+        text-align: center;
+        row-gap: 1rem;
+    }
+    footer .logo,
+    .history-text,
+    .policy-etc {
+        justify-self: center;
+        align-self: center;
+    }
+    .policy-etc {
+        flex-direction: row;
+        gap: 1em;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    #colorblind-toggle {
+        width: 100%;
+        max-width: 200px;
+        margin: 0.5em auto;
+        display: block;
+    }
+}
+
+footer .logo {
+    grid-column: 1 / 2; 
+    grid-row: 1 / 3;
+    justify-self: center;
+}
+
+footer .policy-etc {
+    grid-column: 3;
+    grid-row: 3;
+    grid-row-start: 1;
+    display: flex;
+    justify-self: center;
+    align-self: center;
 }
 
 .history-text {
@@ -213,47 +325,9 @@ footer {
     align-self: center;
 }
 
-.policy-etc {
-    grid-column-start: 3;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    justify-self: center; 
-    align-self: center;
-}
 
 .policy-etc {
   display: flex;   
   gap: 6em;       
 }
 /* --------------------------------------------------- */
-
-
-/* ---------------------- COLORBLIND MODE ---------------------- */
-body.colorblind-mode {
-    background-color: #FDF6E3; 
-    color: #000080;
-}
-
-/* Sections in colorblind mode */
-body.colorblind-mode .section-1 {
-    background-color: #007C91;
-    color: black;
-}
-
-body.colorblind-mode .section-2 {
-    background-color: #29B6C5;
-    color: #000;
-}
-
-body.colorblind-mode .section-3 {
-    background-color: #B2EBF2;
-    color: black;
-}
-
-/* Header and Footer in colorblind mode */
-body.colorblind-mode header,
-body.colorblind-mode footer {
-    background: #F0EAD6;
-    color: black;
-}
-/* ------------------------------------------------------------- */
