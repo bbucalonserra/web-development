@@ -233,6 +233,12 @@ main section {
     align-self: center;
 }
 
+.tiles a {
+    text-decoration: none;
+    color: #3A3A3A;
+    cursor: pointer;
+}
+
 
 /* -------------------------------------------------- */
 
@@ -242,18 +248,21 @@ main section {
     font-size: 20px;
     color: black;
     background-color: #FFD54F;
+    box-shadow: 4px 4px 8px #888888;
 }
 
 .section-2 {
     font-size: 20px;
     color: black;
     background-color: #FFE082;
+    box-shadow: 4px 4px 8px #888888;
 }
 
 .section-3 {
     font-size: 20px;
     color: black;
     background-color: #FFECB3;
+    box-shadow: 4px 4px 8px #888888;
     margin-bottom: 8rem;
 }
 /* ---------------------------------------------------------------- */
