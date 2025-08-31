@@ -24,6 +24,35 @@ function main_anchors() {
 }
 // --------------------------------------------------------------------------
 
+
+// --------------------------- Handle bars Validation--------------------------- 
+function validateJson(json, isIndex) {
+    var errors = [];
+
+    if (!json || typeof json !== "object") {
+        errors.push("Root must be an object.");
+        return { ok: false, errors: errors };
+    }
+
+    if (isIndex) {
+        if (!Array.isArray(json.phrases) || json.phrases.length === 0) {
+            errors.push("'phrases' must be a non-empty array of strings.");
+        }
+    } else {
+        if (!Array.isArray(json.sections) || json.sections.length === 0) {
+            errors.push("'sections' must be a non-empty array.");
+        }
+    }
+
+    if (json.tiles != null && !Array.isArray(json.tiles)) {
+        errors.push("'tiles' must be an array when present.");
+    }
+
+    return { ok: errors.length === 0, errors: errors };
+}
+
+
+
 // --------------------------- Handle bars ---------------------------  
 /*
 In the browser, there're always two global objects: window (the tab) and document (DOM document object model, thus the "tree" with all HTML elements). Firstly, we select the DOCUMENT, then the add event listener waits until the HTML is saved  in the RAM memory, then waits some event (could be user event such as a click, tpye, scroll;  or browser event such as load, error, content loaded.) to happen.
@@ -76,6 +105,15 @@ document.addEventListener("DOMContentLoaded", function() {
             
             // Values from fetch
             const currentFile = "data/" + window.location.pathname.split("/")[2].split(".")[0] + ".json";
+            const isIndex = currentFile === "data/index.json";
+
+            // ----------------- ADDED VALIDATION -----------------
+            const v = validateJson(jsondata, isIndex);
+            if (!v.ok) {
+                document.getElementById("content").innerHTML = "<pre>" + v.errors.join("\n") + "</pre>";
+                return; // stop if invalid
+            }
+            // ----------------------------------------------------
 
             data = {
                 loaded: true,

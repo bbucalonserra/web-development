@@ -98,6 +98,11 @@ main {
     flex: 1;
 }
 
+/* Keep this comment in English */
+.skip-link { position:absolute; left:-9999px; top:auto; }
+.skip-link:focus { left:1rem; top:1rem; background:#fff; padding:.5rem 1rem; outline:2px solid #000; z-index:1000; }
+
+
 .main-globe {
   height: 8rem;
   margin: 0; 
@@ -107,13 +112,14 @@ main section {
     font-size: large;
     grid-template-rows: auto auto;
     margin-bottom: 2rem;
-    margin-top: 2rem;
+    margin-top: 4rem;
     margin-left: 2rem;
     padding-top: 2rem;
     padding-bottom: 6rem;
     padding-left: 2rem;
     border-radius: 20px;
-    width: 80%;
+    width: 85%;
+    min-height: 20rem;
 }
 
 

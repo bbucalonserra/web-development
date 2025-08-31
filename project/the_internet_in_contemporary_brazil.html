@@ -11,6 +11,7 @@
         <!--Tag to provide metadata. It is an empty tag (does not close).-->
         <meta charset="UTF-8"> <!--Style of codification-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--How the webpage is going to behave in different screens (iOS, Android, etc.), starting with scale 1.0.-->
+        <meta name="description" content="Contemporary internet in Brazil, with accessible navigation, meaningful alt text, and screen reader-friendly structure."> <!--Accessibility and SEO description-->
         <link rel="stylesheet" href="style.css">
         <script src="handlebars.js"></script> <!--Importing handle bars.-->
         <script src="script.js"></script>
@@ -18,19 +19,22 @@
 
     <!--The most dynamic part of the html. Here it goes all visible content for user. Such as images, text, etc.-->
     <body class="page-3">
+        <!-- Skip link to allow keyboard users to jump straight to main content -->
+        <a href="#content" class="skip-link">Skip to main content</a>
+
         <!--Top section, usually contains logo, title, or navigation (semantic tag).-->
         <header>
             
             <a href = "https://www.london.ac.uk/">
-                <img src="./assets/pictures/uol_logo.png", class="logo-image">
+                <img src="./assets/pictures/uol_logo.png" class="logo-image" alt="Visit University of London website">
             </a>
 
-            <nav> <!--Navegation bar-->
+            <nav aria-label="Primary"> <!--Navegation bar-->
                 <ul> <!--Unordered List-->
                     <li><a href="index.html">Home</a></li> <!--Link 1-->
                     <li><a href="first_steps_internet.html">Page 1</a></li> <!--Link 2-->
                     <li><a href="the_commercial_internet_and_popularization.html">Page 2</a></li> <!--Link 3-->
-                    <li><a href="the_internet_in_contemporary_brazil.html">Page 3</a></li> <!--Link 3-->
+                    <li><a href="the_internet_in_contemporary_brazil.html" aria-current="page">Page 3</a></li> <!--Link 3-->
                 </ul>
             </nav>
 
@@ -39,11 +43,11 @@
         </header>
 
         <!--Central section, hold the webpage main content (semantic tag).-->
-        <main id = "content"></main>
+        <main id = "content"><h1>The internet in the contemporany Brazil</h1></main>
 
         <!--Bottom section, usually contain contact information, copyright and links (semantic tag).-->
         <footer>
-            <div class="logo"><a href = "https://www.london.ac.uk/"><img src="./assets/pictures/uol_logo.png" alt="Logo" class="logo-image"></a></div>
+            <div class="logo"><a href = "https://www.london.ac.uk/"><img src="./assets/pictures/uol_logo.png" alt="Visit University of London website" class="logo-image"></a></div>
             <div class="history-text"> &copy; 2025 History of Internet in Brazil. All rights reserved. </div>
             <div class="policy-etc">
                 <a href="privacy_policy.html">Privacy Policy</a> 

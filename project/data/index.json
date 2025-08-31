@@ -2,26 +2,29 @@
     "title": "homepage",
     "loaded": true,
     "phrases": [
-    { "text": "Brazil’s first internet connection was established in 1988." },
-    { "text": "In 1991, the first Brazilian websites went online." },
-    { "text": "The academic network RNP connected universities across Brazil." },
-    { "text": "In 1995, the internet became publicly available in Brazil." },
-    { "text": "By the 2000s, Brazil was one of the fastest-growing internet markets." },
-    { "text": "Social media transformed Brazilian online culture in the 2010s." },
-    { "text": "Brazil is now among the largest internet user populations in the world." }
+        { "text": "Brazil’s first internet connection was established in 1988." },
+        { "text": "In 1991, the first Brazilian websites went online." },
+        { "text": "The academic network RNP connected universities across Brazil." },
+        { "text": "In 1995, the internet became publicly available in Brazil." },
+        { "text": "By the 2000s, Brazil was one of the fastest-growing internet markets." },
+        { "text": "Social media transformed Brazilian online culture in the 2010s." },
+        { "text": "Brazil is now among the largest internet user populations in the world." }
     ],
     "tiles": [
         {
             "text": "\"The internet is becoming the town square for the global village of tomorrow.\" <br><br><br><abbr title='Co-founder of Microsoft and philanthropist'><a href='https://en.wikipedia.org/wiki/Bill_Gates' target='_blank'>Bill Gates</a></abbr>",
-            "image": "./assets/pictures/computer.png"
+            "image": "./assets/pictures/computer.png",
+            "alt": "Illustration of a computer symbolizing early internet connectivity"
         },
         {
             "text": "\"We are all now connected by the internet, like neurons in a giant brain.\" <br><br><br><abbr title='Theoretical physicist and cosmologist'><a href='https://en.wikipedia.org/wiki/Stephen_Hawking' target='_blank'>Stephen Hawking</a></abbr>",
-            "image": "./assets/pictures/commercial_internet.png"
+            "image": "./assets/pictures/commercial_internet.png",
+            "alt": "Icon representing commercial internet expansion"
         },
         {
             "text": "\"One of the wonderful things about internet is it's like a salon. It brings people together from different intellectual walks of life.\" <br><abbr title='Nobel Prize-winning neuroscientist'><a href='https://en.wikipedia.org/wiki/Eric_Kandel' target='_blank'>Eric Kandel</a></abbr>",
-            "image": "./assets/pictures/popularization.png"
+            "image": "./assets/pictures/popularization.png",
+            "alt": "Graphic of global connections symbolizing popularization of the internet"
         }
     ]
 }
