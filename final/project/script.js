@@ -44,10 +44,6 @@ function validateJson(json, isIndex) {
         }
     }
 
-    if (json.tiles != null && !Array.isArray(json.tiles)) {
-        errors.push("'tiles' must be an array when present.");
-    }
-
     return { ok: errors.length === 0, errors: errors };
 }
 
@@ -125,8 +121,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             data = {
                 loaded: true,
-                [currentFile == "data/index.json" ? "phrases" : "sections"]: currentFile === "data/index.json" ? jsondata.phrases : jsondata.sections,
-                tiles: jsondata.tiles || []
+                [currentFile == "data/index.json" ? "phrases" : "sections"]: currentFile === "data/index.json" ? jsondata.phrases : jsondata.sections
             };
 
             // Renders the json

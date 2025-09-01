@@ -1,9 +1,11 @@
-/* ---------------------- IMPORTS ---------------------- */
+/* ===================================================== 0. FIRST GENERAL ADJUSTMENTS ===================================================== */
+
+/* ---------------------- IMPORTS --------------------------------------------------------------------------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
-/* ----------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------ */
 
 
-/* ---------------------- RESET / BASE ---------------------- */
+/* ---------------------- RESET / BASE --------------------------------------------------------------------------------------------------- */
 * { /* Apply the configurations into the whole webpage. CSS "reset" */
     margin: 0; 
     padding: 0; 
@@ -24,10 +26,10 @@ body {
 html, body {
     height: 100%;
 }
-/* --------------------------------------------------------- */
+/* ======================================================================================================================================== */
 
 
-/* ---------------------- HEADER ---------------------- */
+/* ===================================================== 1. HEADER ======================================================================== */
 header {
     display: grid; 
     grid-template-columns: auto auto 1fr auto; 
@@ -90,12 +92,18 @@ header nav ul li a::after {
 header nav ul li a:hover::after {
     width: 100%;
 }
-/* --------------------------------------------------- */
+/* ======================================================================================================================================== */
 
 
-/* ---------------------- MAIN ---------------------- */
+/* ===================================================== 2. MAIN ========================================================================= */
 main {
     flex: 1;
+}
+
+#main-index{
+    margin-top: 3rem;
+    font-size: 3.5rem;
+    margin-left: 15rem;
 }
 
 #title_page1 {
@@ -153,12 +161,9 @@ main {
     background-size: cover;
 }
 
-
-
 /* Keep this comment in English */
 .skip-link { position:absolute; left:-9999px; top:auto; }
 .skip-link:focus { left:1rem; top:1rem; background:#fff; padding:.5rem 1rem; outline:2px solid #000; z-index:1000; }
-
 
 .main-globe {
   height: 8rem;
@@ -179,7 +184,7 @@ main section {
     min-height: 20rem;
 }
 
-
+/* ---------------------- SLIDER ---------------------------------------------------------------------------------------------------------- */
 .container {
     padding: 2rem;
     background-color: #3c9242;
@@ -214,7 +219,6 @@ main section {
     justify-content: center;
     align-items: center; 
     text-align: center;
-
 }
 
 .slider-nav {
@@ -236,32 +240,7 @@ main section {
 .slider-nav a.active {
     background-color: grey;
 }
-
-.tiles {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    font-size: 30px;
-    align-items: center;
-    gap: 6rem;
-    margin-top: 10rem;
-    margin-bottom: 10rem;
-}
-
 @media (max-width: 700px) {
-    .tiles {
-        flex-direction: column;
-        height: auto;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-    }
-    #tile {
-        width: 95vw;
-        max-width: 400px;
-        height: auto;
-        padding-top: 2rem;
-        margin: 0 auto;
-    }
     footer .policy-etc {
         flex-direction: row;
         gap: 1em;
@@ -272,42 +251,7 @@ main section {
     }
 }
 
-#tile {
-    color: #1F2937;
-    display: grid;
-    height: 40rem;
-    width: 100%;
-    max-width: 30rem;
-    min-width: 15rem;
-    justify-content: center; /* Horizontal. */
-    align-items: center; /* Vertical. */
-    text-align: center; /* Text itself. */
-    margin: 0; 
-    padding: 1rem;
-    background-color: #FFFCF5;
-    border: #DED6C8;
-    border-radius: 40px;
-    box-shadow: 4px 4px 8px #888888;
-}
-
-.tiles img {
-    width: 180px;
-    height: auto;
-    justify-self: center;
-    align-self: center;
-}
-
-.tiles a {
-    text-decoration: none;
-    color: #3A3A3A;
-    cursor: pointer;
-}
-
-
-/* -------------------------------------------------- */
-
-
-/* ---------------------- SECTIONS (DEFAULT) ---------------------- */
+/* ---------------------- SECTIONS (DEFAULT) --------------------------------------------------------------------------------------------- */
 .section-1 {
     font-size: 20px;
     color: black;
@@ -329,10 +273,78 @@ main section {
     box-shadow: 4px 4px 8px #888888;
     margin-bottom: 8rem;
 }
-/* ---------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------------------------- */
 
 
-/* ---------------------- FOOTER ---------------------- */
+/* ---------------------- STAT CIRCLES --------------------------------------------------------------------------------------------------- */
+.stats-section {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin: 3rem auto;
+    max-width: 120rem;
+    text-align: center;
+}
+
+.stat-circle {
+    flex: 1 1 15rem;
+    display: flex;
+    margin-bottom: 8rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 20rem;
+}
+
+
+.circle {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    background-color: #fffcf5;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.4rem;
+    margin-bottom: 1rem;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.stat-circle p {
+    font-size: 1.5rem;
+    color: #000000;
+}
+
+@media (max-width: 700px) {
+    .stats-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        margin: 2rem auto;
+    }
+
+    .stat-circle {
+        flex: none;
+        margin: 0;
+    }
+
+    .circle {
+        width: 8rem;
+        height: 8rem;
+        font-size: 2rem;
+    }
+
+    .stat-circle p {
+        font-size: 1rem;
+        max-width: 90%;
+    }
+}
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+
+/* ===================================================== 3. FOOTER ======================================================================== */
 footer {
     background: #F0EAD6;
     font-size: 14px;
@@ -398,49 +410,8 @@ footer .policy-etc {
     align-self: center;
 }
 
-
 .policy-etc {
   display: flex;   
   gap: 6em;       
 }
-
-/* --------------------------------------------------- */
-
-
-
-/* ---------------------- STAT CIRCLES ---------------------- */
-.stats-section {
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 3rem auto;
-    max-width: 120rem; 
-    text-align: center;
-}
-
-.stat-circle {
-    flex: 1 1 15rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.circle {
-    width: 12rem;
-    height: 12rem;
-    border-radius: 50%;
-    background-color: #fffcf5;
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-
-.stat-circle p {
-    font-size: 1.5rem;
-    color: #000000;
-}
+/* ======================================================================================================================================== */
