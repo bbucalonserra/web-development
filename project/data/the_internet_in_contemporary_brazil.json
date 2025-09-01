@@ -1,0 +1,27 @@
+{
+  "title": "The Internet in Contemporary Brazil",
+  "loaded": true,
+  "sections": [
+    {
+      "title": "Mobile Internet and Connectivity Expansion",
+      "text": "Over the past two decades, the internet has been driven by the growth of mobile access. Cell phones became the main gateway for millions of Brazilians, especially in regions where fixed broadband was limited. The rollout of 3G, 4G, and more recently 5G networks increased both reach and speed, making mobile the dominant form of internet access in the country.",
+      "sectionClass": "section-1",
+      "image": "./assets/pictures/mobile_connectivity.png",
+      "alt": "Illustration of Brazil’s mobile connectivity expansion from 3G to 5G"
+    },
+    {
+      "title": "Governance and Regulation",
+      "text": "The creation of the Brazilian Internet Steering Committee (CGI.br) and NIC.br established a governance model involving government, academia, private sector, and civil society. Another key milestone was the Marco Civil da Internet, enacted in 2014, which guaranteed net neutrality, privacy, and freedom of expression, becoming known as Brazil’s “Internet Bill of Rights.”",
+      "sectionClass": "section-2",
+      "image": "./assets/pictures/governance_regulation.png",
+      "alt": "Graphic representing CGI.br, NIC.br, and the Marco Civil da Internet"
+    },
+    {
+      "title": "Challenges and Future Perspectives",
+      "text": "The internet today supports essential areas such as education, telemedicine, banking, commerce, and remote work. However, challenges remain: misinformation, cybersecurity risks, unequal access, and the regulation of big tech platforms. Looking forward, Brazil’s main goals are to expand connectivity, reduce regional inequalities, and guarantee that all citizens have access to a secure and democratic digital environment.",
+      "sectionClass": "section-3",
+      "image": "./assets/pictures/challenges_future.png",
+      "alt": "Icon set depicting misinformation, security, and connectivity challenges"
+    }
+  ]
+}
