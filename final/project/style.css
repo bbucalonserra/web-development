@@ -98,6 +98,63 @@ main {
     flex: 1;
 }
 
+#title_page1 {
+    color: white;
+    display: flex;
+    align-items: center; /* vertical alignment. */
+    justify-content: center /* horizontal alignment. */;
+    text-shadow: 
+        -1px -1px 0 black,  
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
+    font-size: 50px;
+    min-height: 25rem;
+    text-align: center;
+    background-image: url("assets/pictures/arpanet.png");
+    background-position: center;
+}
+
+#title_page2 {
+    color: white;
+    display: flex;
+    align-items: center; /* vertical alignment. */
+    justify-content: center /* horizontal alignment. */;
+    text-shadow: 
+        -1px -1px 0 black,  
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
+    font-size: 50px;
+    min-height: 25rem;
+    text-align: center;
+
+    background-image: url("assets/pictures/orkut.png");
+    background-position: center;
+}
+
+#title_page3 {
+    color: white;
+    display: flex;
+    align-items: center; /* vertical alignment. */
+    justify-content: center /* horizontal alignment. */;
+    text-shadow: 
+        -1px -1px 0 black,  
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
+    font-size: 50px;
+    min-height: 25rem;
+    text-align: center;
+
+    background-image: url("assets/pictures/mob_brazil.png");
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+
+
 /* Keep this comment in English */
 .skip-link { position:absolute; left:-9999px; top:auto; }
 .skip-link:focus { left:1rem; top:1rem; background:#fff; padding:.5rem 1rem; outline:2px solid #000; z-index:1000; }
@@ -128,6 +185,7 @@ main section {
     background-color: #3c9242;
     font-size: 40px; 
     line-height: 1.6;
+    height:25rem;
     color: white;
 }
 
@@ -345,4 +403,44 @@ footer .policy-etc {
   display: flex;   
   gap: 6em;       
 }
+
 /* --------------------------------------------------- */
+
+
+
+/* ---------------------- STAT CIRCLES ---------------------- */
+.stats-section {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 3rem auto;
+    max-width: 120rem; 
+    text-align: center;
+}
+
+.stat-circle {
+    flex: 1 1 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circle {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    background-color: #fffcf5;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+
+.stat-circle p {
+    font-size: 1.5rem;
+    color: #000000;
+}
