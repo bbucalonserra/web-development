@@ -103,7 +103,7 @@ main {
 #main-index{
     margin-top: 3rem;
     font-size: 3.5rem;
-    margin-left: 10rem;
+    margin-left: 4rem;
 }
 
 #title_page1 {
@@ -321,26 +321,37 @@ main section {
     .stats-section {
         flex-direction: column;
         align-items: center;
-        gap: 2rem;
-        margin: 2rem auto;
+        gap: 0;
+        margin: 1rem auto;
     }
 
     .stat-circle {
-        flex: none;
-        margin: 0;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0;
+        align-items: center;
+        justify-content: flex-start;
     }
 
     .circle {
         width: 8rem;
         height: 8rem;
         font-size: 2rem;
+        margin: 0;
     }
 
     .stat-circle p {
         font-size: 1rem;
         max-width: 90%;
+        margin: 0.25rem 0 0 0;
+        line-height: 1.2;
+    }
+
+    .stats-section > .stat-circle + .stat-circle {
+        margin-top: 0.5rem;
     }
 }
+
 /* ------------------------------------------------------------------------------------------------------------------ */
 
 
