@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("handle-template").innerHTML = "";
     
     // Configuring the variable data to start with false.
-    let data = { loaded: true };
+    let data = { loaded: false }; //mudei
 
     // Creates an arrow function
     const render = () => {
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // We could get that from a website for example.
     // USED STRING MANIPULATION TO SELECT THE PROPER JSON IN DATA!
     // fetch is assyncronous
-    fetch("data/" + window.location.pathname.split("/")[2].split(".")[0] + ".json")
+    fetch("data/" + window.location.pathname.split("/")[3].split(".")[0] + ".json")
         // Response is the object that came from the server. It transforms it into a json. It's a must because it will receive a pure string (even if it's alrady a json).
         // "=>" is an arrow function. "Get the value the arrives in response and return response.json"
         /*
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(jsondata => {
             
             // Values from fetch
-            const currentFile = "data/" + window.location.pathname.split("/")[2].split(".")[0] + ".json";
+            const currentFile = "data/" + window.location.pathname.split("/")[3].split(".")[0] + ".json";
             const isIndex = currentFile === "data/index.json";
 
             // ----------------- ADDED VALIDATION -----------------
