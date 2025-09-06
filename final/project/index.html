@@ -34,29 +34,33 @@
         </header>
 
         <main>
+            <!--Content from handdle bars.-->
             <div id="content"></div>
+
+            <!--Content using text in HTML-->
             <h1 id="main-index"> In 2021:</h1>
             <section class="stats-section">
                 <div class="stat-circle">
-                    <div class="circle">90.0%</div>
+                    <div class="circle" id="circle_1">90.0%</div>
                     <p>Internet reached 90.0% of households</p>
                 </div>
 
                 <div class="stat-circle">
-                    <div class="circle">11.9%</div>
+                    <div class="circle" id="circle_2">11.9%</div>
                     <p>Still had only a tube television</p>
                 </div>
 
                 <div class="stat-circle">
-                    <div class="circle">27.8%</div>
+                    <div class="circle" id="circle_3">27.8%</div>
                     <p>Households with pay TV dropped to 27.8%</p>
                 </div>
 
                 <div class="stat-circle">
-                    <div class="circle">96.3%</div>
+                    <div class="circle" id="circle_4">96.3%</div>
                     <p>Only 15.6% had a landline, while 96.3% had a mobile phone</p>
                 </div>
             </section>
+
         </main>
 
         <footer>
@@ -78,7 +82,7 @@
         <script id="handle-template" type="text/x-handlebars-template">
             <div class="container">
                 <div class="slider-wrapper">
-                    <div class="slider">
+                    <div class="slider" id="banner">
                         {{#each phrases}}
                             <!--@index enumrates according to "each"-->
                             <p id="slide-{{@index}}">{{text}}</p>

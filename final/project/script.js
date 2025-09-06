@@ -133,3 +133,28 @@ document.addEventListener("DOMContentLoaded", function() {
 })
 // -----------------------------------------------------------------------
 
+
+// --------------------------- Changeing colors using hover in circles. ---------------------------  
+// NOTE: document is the HTM itself!
+
+// Create a variable to store all the ids from circles.
+let circles = ["circle_1", "circle_2", "circle_3", "circle_4", "circle_5"];
+
+// Loop for all the items inside variable circles, avoiding create a single code structure for each circle.
+for (let i = 0; i < circles.length; i++) {
+
+    // First, we store the element_id in the variable circle (example, loop 1, let circle = circle_1)
+    let circle = document.getElementById(circles[i]);
+
+    // Now, we add an event listner for mouseover, hence when the user mouse over the tag with id = circle_1 (1,2,3,4), change background color and font color. 
+    circle.addEventListener("mouseover", function() {
+        circle.style.backgroundColor = "#3c9242";
+        circle.style.color = "white";
+    });
+
+    // Finally,  we add an event listner for mouse out, hence when the user mouse out the tag with id = circle_1 (1,2,3,4), change back again.
+    // We'll use remove to remove attribute.
+    circle.addEventListener("mouseout", function() {
+        circle.removeAttribute("style");
+    });
+}
