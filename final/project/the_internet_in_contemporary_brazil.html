@@ -1,6 +1,86 @@
-script.js:57 Uncaught TypeError: Cannot read properties of null (reading 'addEventListener')
-    at script.js:57:5
-(anonymous) @ script.js:57Understand this error
-script.js:41 Uncaught (in promise) TypeError: Cannot read properties of null (reading 'addEventListener')
-    at hoverCircles (script.js:41:16)
-    at script_handdlebars.js:105:13
+<!--Tag to communicate with browser for it to be treated as HTML.-->
+<!DOCTYPE html>
+
+<!--Tag to communicate with browser to start to interpret the HTML. The language is a type of codification for the browser to interpret. The entire project must be inside this tag.-->
+<html lang="en">
+
+    <!--Tag to hold metadata about the page (title, styles, script), NOT the visible content.-->
+    <head>
+        <title>The internet in the contemporary Brazil</title> <!--Title showed in the browser tab.-->
+
+        <!--Tag to provide metadata. It is an empty tag (does not close).-->
+        <meta charset="UTF-8"> <!--Style of codification-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--How the webpage is going to behave in different screens (iOS, Android, etc.), starting with scale 1.0.-->
+        <meta name="description" content="Contemporary internet in Brazil, with accessible navigation, meaningful alt text, and screen reader-friendly structure."> <!--Accessibility and SEO description-->
+        <link rel="stylesheet" href="style.css">
+        <script src="handlebars.js"></script> <!--Importing handle bars.-->
+        <script src="script.js" defer></script> <!--defer makes the browser executes the script in parallel, than the execution of the script happens after the HTML was read.-->
+        <script src="script_handdlebars.js"></script>
+    </head>
+
+    <!--The most dynamic part of the html. Here it goes all visible content for user. Such as images, text, etc.-->
+    <body class="page-3">
+        <!-- Skip link to allow keyboard users to jump straight to main content -->
+        <a href="#content" class="skip-link">Skip to main content</a>
+
+        <!--Top section, usually contains logo, title, or navigation (semantic tag).-->
+        <header>
+            
+            <a href = "https://www.london.ac.uk/">
+                <img src="./assets/pictures/uol_logo.png" class="logo-image" alt="Visit University of London website">
+            </a>
+
+            <nav aria-label="Primary"> <!--Navegation bar-->
+                <ul> <!--Unordered List-->
+                    <li><a href="index.html">Home</a></li> <!--Link 1-->
+                    <li><a href="first_steps_internet.html">Page 1</a></li> <!--Link 2-->
+                    <li><a href="the_commercial_internet_and_popularization.html">Page 2</a></li> <!--Link 3-->
+                    <li><a href="the_internet_in_contemporary_brazil.html" aria-current="page">Page 3</a></li> <!--Link 3-->
+                </ul>
+            </nav>
+
+            <!-- <h1>Delegation of ".br"</h1> The visual title. Only allowed one h1 per page (per html). -->
+
+        </header>
+
+        <!--Central section, hold the webpage main content (semantic tag).-->
+        <main>
+            <h1 id = "title_page3">The internet in the contemporary Brazil</h1>
+
+            <div id="content"></div> <!-- Handlebars só vai preencher aqui -->
+            
+            <!--Back to the top button-->
+            <div class="nav-button-back-to-the-top">
+                <button id="button-back-to-the-top">Back to the top</button>
+            </div>
+        </main>
+
+        <!--Bottom section, usually contain contact information, copyright and links (semantic tag).-->
+        <footer>
+            <div class="logo">
+                <a href="https://www.london.ac.uk/" target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/pictures/uol_logo.png" alt="Visit University of London website" class="logo-image">
+                </a>
+            </div>
+            <div class="history-text">
+                &copy; 2025 History of Internet in Brazil. All rights reserved.
+            </div>
+            <div class="policy-etc">
+                <a href="privacy_policy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a> 
+                <a href="terms_of_use.html" target="_blank" rel="noopener noreferrer">Terms of Use</a> 
+                <a href="https://www.cos.ufrj.br/uploadfile/1430748034.pdf" target="_blank" rel="noopener noreferrer">Reference Article</a> 
+            </div>
+        </footer>
+
+    <script id="handle-template" type="text/x-handlebars-template">
+    {{#each sections}} <!--Everything that is inside each is going to be repeated like a loop.-->
+        <section class="{{sectionClass}}">
+        <div class="texts">
+            <h2>{{title}}</h2>
+            <p>{{{text}}}</p>
+        </div>
+        </section>
+    {{/each}}
+    </script>
+    </body>
+</html>

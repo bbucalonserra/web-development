@@ -50,18 +50,28 @@ function hoverCards() {
         });
     }
 }
+// --------------------------- Back to the top button --------------------------- 
+function backToTheTop () {
+    let top = document.getElementById("button-back-to-the-top");
+
+    // Window considers the full screen.
+    top.addEventListener("click", function() {
+        window.scrollTo({top: 0, behavior: "smooth" });
+    })
+};
+
 
 // --------------------------- Tracking events using JavaScript ---------------------------
+// --------------------------- Homepage ---------------------------
 // ----- Track clicks from slider banner 
 function eventSliderBannerClicked () {
 
     let dot_total = document.getElementsByClassName("slider-dot");
-    // console.log(dot_total)
 
     for (let i = 0; i < dot_total.length; i++) {
 
         let hover = document.getElementById("dot-" + i);
-        // console.log(hover)
+        
         hover.addEventListener("click", function () {
             console.log("Event Slider Bannder Clicked: slider number " + i);
         })  
@@ -72,14 +82,37 @@ function eventSliderBannerClicked () {
 function eventHoverInOut () {
 
     let hover_total = document.getElementsByClassName("circle")
-    console.log(hover_total.length)
 
     for (let i = 0; i < hover_total.length; i++) {
 
         let hover = document.getElementById("circle_" + (i + 1));
-        // console.log(hover)
         hover.addEventListener("mouseover", function () {
             console.log("Event Hover in Card: card number " + i);
         })  
     }
+}
+
+// ----- Track button back to the top clicked
+function EventBackToTheTop () {
+    let top = document.getElementById("button-back-to-the-top");
+
+    top.addEventListener("click", function() {
+        console.log("Event Back to the Top Button Clicked")
+    })
+};
+
+// -- Function to track scroll.
+function EventScroll () {
+    window.addEventListener("scroll", function() {
+
+    // window.innerHeight = visible screen of the browser.
+    // window.scrollY = how much the user scrolled down.
+    // Hence, window.innerHeight + window.scroll = how much users saw the page.
+    // document.documentElement.scrollHeight = total page content
+    
+    let page_size = document.documentElement.scrollHeight;
+
+    if (window.innerHeight + window.scrollY >= page_size) {
+        console.log("Event Scroll Until End of Page (page size = " + page_size + "px)");
+    }})
 }

@@ -184,6 +184,25 @@ main section {
     min-height: 20rem;
 }
 
+.nav-button-back-to-the-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#button-back-to-the-top {
+  width: 200px; 
+  height: 60px;
+  font-size: 20px;
+  margin-bottom: 6rem;
+  background-color: #3c9242;
+  color: white;
+  border: #3c9242;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
 /* ---------------------- SLIDER ---------------------------------------------------------------------------------------------------------- */
 .container {
     padding: 2rem;

@@ -101,14 +101,29 @@ document.addEventListener("DOMContentLoaded", function() {
             // Calling anchors.
             main_anchors();
 
-            // Calling hover cards.
+            // Buttom to the top.
+            // Since there's no button in the homepage, let's first check if the result is not null.
+            if ((document.getElementById("button-back-to-the-top")) != null) {
+                backToTheTop();
+            }
+
+            // EVENT: Calling hover cards.
             hoverCards();
 
-            // Dot clicked
+            // EVENT: Dot clicked
             eventSliderBannerClicked();
 
-            //
+            // EVENT: hover in / out
             eventHoverInOut();
+
+            // EVENT: button back to the top clicked
+            // Since there's no button in the homepage, let's first check if the result is not null.
+            if ((document.getElementById("button-back-to-the-top")) != null) {
+                EventBackToTheTop();
+            }
+
+            //EVENT: scroll
+            EventScroll();
         });
 })
 // -----------------------------------------------------------------------
