@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="style.css">
         <script src="handlebars.js"></script> <!--Importing handle bars.-->
         <script src="script.js" defer></script> <!--defer makes the browser executes the script in parallel, than the execution of the script happens after the HTML was read.-->
+        <script src="script_handdlebars.js"></script>
     </head>
     <body>
         <!-- Skip link to allow keyboard users to jump straight to main content -->
@@ -92,7 +93,7 @@
                     <div class="slider-nav">
                         {{#each phrases}}
                             <!--Create a class slider dot if is the first one, than active.-->
-                            <a href="#slide-{{@index}}" class="slider-dot {{#if @first}}active{{/if}}"></a>
+                            <a href="#slide-{{@index}}" class="slider-dot {{#if @first}}active{{/if}}" id="dot-{{@index}}"  ></a>
                         {{/each}}
                     </div>
                 </div>
