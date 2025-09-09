@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!--Document type, declares that the document is HTML5.-->
+<html lang="en"> <!--Root element, declares the language of the document.-->
     <head>
         <title>Homepage</title> <!--Title showed in the browser tab.-->
 
@@ -7,89 +7,107 @@
         <meta charset="UTF-8"> <!--Style of codification-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--How the webpage is going to behave in different screens (iOS, Android, etc.), starting with scale 1.0.-->
         <meta name="description" content="History of the Internet in Brazil with accessible navigation, meaningful alt text, and screen reader-friendly structure."> <!--Accessibility and SEO description-->
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css"> <!--Link external CSS file.-->
         <script src="handlebars.js"></script> <!--Importing handle bars.-->
         <script src="script.js" defer></script> <!--defer makes the browser executes the script in parallel, than the execution of the script happens after the HTML was read.-->
-        <script src="script_handdlebars.js" defer></script>
+        <script src="script_handdlebars.js" defer></script> <!--Importing external JavaScript file with defer.-->
     </head>
-    <body>
+    <body> <!--Body contains all visible content.-->
         <!-- Skip link to allow keyboard users to jump straight to main content -->
         <a href="#content" class="skip-link">Skip to main content</a>
 
         <!--Top section, usually contains logo, title, or navigation (semantic tag).-->
         <header>
-            
+            <!--Anchor, creates a link-->
             <a href = "https://www.london.ac.uk/">
+                <!--Add a image.-->
                 <img src="./assets/pictures/uol_logo.png" class="logo-image" alt="Visit University of London website">
             </a>
 
+            <!--Nav bar.-->
             <nav aria-label="Primary"> <!--Navegation bar-->
                 <ul> <!--Unordered List-->
-                    <li><a href="index.html" aria-current="page">Home</a></li> <!--Link 1-->
-                    <li><a href="first_steps_internet.html">Page 1</a></li> <!--Link 2-->
-                    <li><a href="the_commercial_internet_and_popularization.html">Page 2</a></li> <!--Link 3-->
-                    <li><a href="the_internet_in_contemporary_brazil.html">Page 3</a></li> <!--Link 3-->
-                    
+                    <li><a href="index.html" aria-current="page">Home</a></li> <!--Link 1 in list item.-->
+                    <li><a href="first_steps_internet.html">Page 1</a></li> <!--Link 2 in list item.-->
+                    <li><a href="the_commercial_internet_and_popularization.html">Page 2</a></li> <!--Link 3 in list item.-->
+                    <li><a href="the_internet_in_contemporary_brazil.html">Page 3</a></li> <!--Link 4 in list item.-->
                 </ul>
             </nav>
         </header>
 
-        <main>
-            <!--Content from handdle bars.-->
+        <!--Main content.-->
+        <main> <!--Semantic tag for the main content of the document.-->
+            <!--CONTENT FROM HANDDLE BARS.-->
             <div id="content"></div>
 
-            <!--Content using text in HTML-->
-            <h1 id="main-index"> In 2021:</h1>
-            <section class="stats-section">
+            <!--CONTENT FROM HTML DIRECTLY.-->
+            <h1 id="main-index"> In 2021:</h1> <!--Main heading.-->
+
+            <!--Create sections.-->
+            <section class="stats-section"> <!--Semantic tag for grouping related content.-->
+                <!--Division.-->
                 <div class="stat-circle">
+                    <!--Division.-->
                     <div class="circle" id="circle_1">90.0%</div>
+                    <!--Paragraph-->
                     <p>Internet reached 90.0% of households</p>
                 </div>
 
+                <!--Division.-->
                 <div class="stat-circle">
+                    <!--Division.-->
                     <div class="circle" id="circle_2">11.9%</div>
+                    <!--Paragraph-->
                     <p>Still had only a tube television</p>
                 </div>
 
+                <!--Division.-->
                 <div class="stat-circle">
+                    <!--Division.-->
                     <div class="circle" id="circle_3">27.8%</div>
+                    <!--Paragraph-->
                     <p>Households with pay TV dropped to 27.8%</p>
                 </div>
 
+                <!--Division.-->
                 <div class="stat-circle">
+                    <!--Division.-->
                     <div class="circle" id="circle_4">96.3%</div>
+                    <!--Paragraph-->
                     <p>Only 15.6% had a landline, while 96.3% had a mobile phone</p>
                 </div>
             </section>
         </main>
 
-        <footer>
-            <div class="logo">
-                <a href="https://www.london.ac.uk/" target="_blank" rel="noopener noreferrer">
-                    <img src="./assets/pictures/uol_logo.png" alt="Visit University of London website" class="logo-image">
+        <!--Footer-->
+        <footer> <!--Semantic tag for footer section.-->
+            <div class="logo"> <!--Division for footer logo.-->
+                <a href="https://www.london.ac.uk/" target="_blank" rel="noopener noreferrer"> <!--Anchor with security attributes.-->
+                    <img src="./assets/pictures/uol_logo.png" alt="Visit University of London website" class="logo-image"> <!--Image with alt text.-->
                 </a>
             </div>
-            <div class="history-text">
+            <div class="history-text"> <!--Division for copyright text.-->
                 &copy; 2025 History of Internet in Brazil. All rights reserved.
             </div>
-            <div class="policy-etc">
+            <div class="policy-etc"> <!--Division for links to policies.-->
                 <a href="privacy_policy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a> 
                 <a href="terms_of_use.html" target="_blank" rel="noopener noreferrer">Terms of Use</a> 
                 <a href="https://www.cos.ufrj.br/uploadfile/1430748034.pdf" target="_blank" rel="noopener noreferrer">Reference Article</a> 
             </div>
         </footer>
 
-        <script id="handle-template" type="text/x-handlebars-template">
-            <div class="container">
-                <div class="slider-wrapper">
-                    <div class="slider" id="banner">
+        <!--Handlebars template-->
+        <script id="handle-template" type="text/x-handlebars-template"> <!--Script tag with handlebars template.-->
+            <div class="container"> <!--Division wrapper.-->
+                <div class="slider-wrapper"> <!--Division for slider wrapper.-->
+                    <div class="slider" id="banner"> <!--Division for slider.-->
                         {{#each phrases}}
                             <!--@index enumrates according to "each"-->
                             <p id="slide-{{@index}}">{{text}}</p>
                         {{/each}}
                     </div>
 
-                    <div class="slider-nav">
+                    <div class="slider-nav"> <!--Division for slider navigation dots.-->
                         {{#each phrases}}
                             <!--Create a class slider dot if is the first one, than active.-->
                             <a href="#slide-{{@index}}" class="slider-dot {{#if @first}}active{{/if}}" id="dot-{{@index}}"  ></a>
