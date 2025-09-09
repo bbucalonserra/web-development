@@ -9,47 +9,51 @@
         <title>The Early Steps of the Internet in Brazil</title> <!--Title showed in the browser tab.-->
 
         <!--Tag to provide metadata. It is an empty tag (does not close).-->
-        <meta charset="UTF-8"> <!--Style of codification-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--How the webpage is going to behave in different screens (iOS, Android, etc.), starting with scale 1.0.-->
-        <meta name="description" content="The early steps of the Internet in Brazil, with accessible navigation, meaningful alt text, and screen reader-friendly structure."> <!--Accessibility and SEO description-->
-        <link rel="stylesheet" href="style.css">
-        <script src="handlebars.js"></script> <!--Importing handle bars.-->
-        <script src="script.js"></script>
-        <script src="script_handdlebars.js"></script>
+        <meta charset="UTF-8"> <!--Character encoding definition.-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Responsive behavior on different devices.-->
+        <meta name="description" content="The early steps of the Internet in Brazil, with accessible navigation, meaningful alt text, and screen reader-friendly structure."> <!--Accessibility and SEO description.-->
+        
+        <!--Tag to link external CSS file.-->
+        <link rel="stylesheet" href="style.css"> 
+
+        <!--Tag to import JavaScript files.-->
+        <script src="handlebars.js"></script> <!--Importing handlebars library.-->
+        <script src="script.js"></script> <!--Importing main script file.-->
+        <script src="script_handdlebars.js"></script> <!--Importing extra script file for handlebars.-->
     </head>
 
-    <!--The most dynamic part of the html. Here it goes all visible content for user. Such as images, text, etc.-->
+    <!--The visible content of the page goes inside the body.-->
     <body class="page-1">
         <!-- Skip link to allow keyboard users to jump straight to main content -->
         <a href="#content" class="skip-link">Skip to main content</a>
 
         <!--Top section, usually contains logo, title, or navigation (semantic tag).-->
         <header>
-            
+            <!--Anchor to link external page.-->
             <a href = "https://www.london.ac.uk/">
+                <!--Image with alt attribute for accessibility.-->
                 <img src="./assets/pictures/uol_logo.png" class="logo-image" alt="Visit University of London website">
             </a>
 
-            <nav aria-label="Primary"> <!--Navegation bar-->
-                <ul> <!--Unordered List-->
+            <!--Navigation bar.-->
+            <nav aria-label="Primary"> <!--Semantic nav tag for accessibility.-->
+                <ul> <!--Unordered list to group navigation links.-->
                     <li><a href="index.html">Home</a></li> <!--Link 1-->
                     <li><a href="first_steps_internet.html" aria-current="page">Page 1</a></li> <!--Link 2-->
                     <li><a href="the_commercial_internet_and_popularization.html">Page 2</a></li> <!--Link 3-->
-                    <li><a href="the_internet_in_contemporary_brazil.html">Page 3</a></li> <!--Link 3-->
+                    <li><a href="the_internet_in_contemporary_brazil.html">Page 3</a></li> <!--Link 4-->
                 </ul>
             </nav>
             <!-- <h1>Delegation of ".br"</h1> The visual title. Only allowed one h1 per page (per html). -->
-
         </header>
 
-        <!--Central section, hold the webpage main content (semantic tag).-->
-        <!-- <main id="content"><h1>The Early Steps of the Internet in Brazil</h1></main> -->
+        <!--Main section, holds the central content of the page (semantic tag).-->
         <main>
-            <!--Title-->
+            <!--Page title-->
             <h1 id = "title_page1">The early steps of the internet in Brazil</h1>
 
-            <!--Handle bar content-->
-            <div id="content"></div> <!-- Handlebars só vai preencher aqui -->
+            <!--Handlebars placeholder content-->
+            <div id="content"></div> <!--Handlebars will populate content here.-->
 
             <!--Back to the top button-->
             <div class="nav-button-back-to-the-top">
@@ -57,32 +61,31 @@
             </div>
         </main>
 
-
-
-        <!--Bottom section, usually contain contact information, copyright and links (semantic tag).-->
+        <!--Footer section, usually contains contact info, copyright and policies.-->
         <footer>
-            <div class="logo">
+            <div class="logo"> <!--Footer logo-->
                 <a href="https://www.london.ac.uk/" target="_blank" rel="noopener noreferrer">
                     <img src="./assets/pictures/uol_logo.png" alt="Visit University of London website" class="logo-image">
                 </a>
             </div>
-            <div class="history-text">
+            <div class="history-text"> <!--Footer text-->
                 &copy; 2025 History of Internet in Brazil. All rights reserved.
             </div>
-            <div class="policy-etc">
+            <div class="policy-etc"> <!--Footer links-->
                 <a href="privacy_policy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a> 
                 <a href="terms_of_use.html" target="_blank" rel="noopener noreferrer">Terms of Use</a> 
                 <a href="https://www.cos.ufrj.br/uploadfile/1430748034.pdf" target="_blank" rel="noopener noreferrer">Reference Article</a> 
             </div>
         </footer>
 
+    <!--Handlebars template script (not executed as JS).-->
     <script id="handle-template" type="text/x-handlebars-template">
-    {{#each sections}} <!--Everything that is inside each is going to be repeated like a loop.-->
-        <section class="{{sectionClass}}">
-        <div class="texts">
-            <h2>{{title}}</h2>
-            <p>{{{text}}}</p>
-        </div>
+    {{#each sections}} <!--Everything inside each will repeat like a loop.-->
+        <section class="{{sectionClass}}"> <!--Section created dynamically-->
+            <div class="texts"> <!--Wrapper for text content-->
+                <h2>{{title}}</h2> <!--Dynamic title-->
+                <p>{{{text}}}</p> <!--Dynamic text, triple braces allow raw HTML.-->
+            </div>
         </section>
     {{/each}}
     </script>
